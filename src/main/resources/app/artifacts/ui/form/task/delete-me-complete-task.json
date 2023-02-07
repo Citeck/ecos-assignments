@@ -1,0 +1,86 @@
+{
+  "id" : "delete-me-complete-task",
+  "formKey" : "delete-me-complete-task",
+  "title" : {
+    "en" : "delete-me-complete-task"
+  },
+  "i18n" : {
+    "ru" : { },
+    "en" : { }
+  },
+  "definition" : {
+    "components" : [ {
+      "label" : {
+        "ru" : "Результат выполнения задачи",
+        "en" : "Result"
+      },
+      "key" : "result",
+      "defaultValue" : "",
+      "refreshOn" : [ ],
+      "optionalWhenDisabled" : false,
+      "type" : "textarea",
+      "input" : true
+    }, {
+      "type" : "columns",
+      "input" : false,
+      "columns" : [ {
+        "components" : [ ],
+        "conditional" : {
+          "show" : null,
+          "when" : null
+        },
+        "type" : "column",
+        "md" : 4,
+        "key" : "column",
+        "index" : 0,
+        "clearOnHide" : true,
+        "label" : "Column",
+        "input" : false
+      }, {
+        "components" : [ ],
+        "conditional" : {
+          "show" : null,
+          "when" : null
+        },
+        "type" : "column",
+        "md" : 4,
+        "key" : "column",
+        "index" : 1,
+        "clearOnHide" : true,
+        "label" : "Column",
+        "input" : false
+      }, {
+        "components" : [ {
+          "label" : {
+            "en" : "Complete",
+            "ru" : "Выполнить задачу"
+          },
+          "key" : "outcome_Complete",
+          "state" : "",
+          "labelPosition" : "left-left",
+          "theme" : "primary",
+          "disableOnInvalid" : true,
+          "refreshOn" : [ ],
+          "optionalWhenDisabled" : false,
+          "type" : "button",
+          "input" : true,
+          "headers" : [ { } ]
+        } ],
+        "conditional" : {
+          "show" : null,
+          "when" : null
+        },
+        "type" : "column",
+        "md" : 4,
+        "key" : "column",
+        "index" : 2,
+        "clearOnHide" : true,
+        "label" : "Column",
+        "input" : false
+      } ],
+      "key" : "columns2"
+    } ],
+    "formId" : "delete-me-complete-task"
+  },
+  "notExists" : false
+}

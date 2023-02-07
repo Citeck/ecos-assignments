@@ -1,0 +1,376 @@
+{
+  "id" : "delete-me",
+  "formKey" : "delete-me",
+  "title" : {
+    "en" : "delete-me"
+  },
+  "i18n" : {
+    "en" : {
+      "required" : "{{field}} is required"
+    },
+    "ru" : {
+      "required" : "Поле {{field}} не может быть пустым"
+    }
+  },
+  "definition" : {
+    "components" : [ {
+      "scrollableContent" : true,
+      "key" : "panel4",
+      "type" : "panel",
+      "input" : false,
+      "components" : [ {
+        "title" : "Общее",
+        "key" : "panel2",
+        "type" : "panel",
+        "input" : false,
+        "components" : [ {
+          "label" : {
+            "ru" : "Название",
+            "en" : "Title"
+          },
+          "key" : "title",
+          "validate" : {
+            "required" : true
+          },
+          "defaultValue" : "",
+          "refreshOn" : [ ],
+          "optionalWhenDisabled" : false,
+          "customConditional" : "console.log(data);",
+          "type" : "textfield",
+          "input" : true,
+          "inputMasks" : [ { } ]
+        }, {
+          "label" : {
+            "ru" : "Описание",
+            "en" : "Description"
+          },
+          "key" : "description",
+          "validate" : {
+            "required" : true
+          },
+          "defaultValue" : "",
+          "refreshOn" : [ ],
+          "optionalWhenDisabled" : false,
+          "type" : "textarea",
+          "input" : true
+        }, {
+          "columns" : [ {
+            "components" : [ {
+              "label" : {
+                "ru" : "Срок",
+                "en" : "Deadline"
+              },
+              "key" : "dueDate",
+              "format" : "yyyy-MM-dd",
+              "datePicker" : {
+                "minDate" : "",
+                "maxDate" : ""
+              },
+              "enableTime" : false,
+              "timePicker" : {
+                "showMeridian" : false
+              },
+              "defaultValue" : "",
+              "refreshOn" : [ ],
+              "optionalWhenDisabled" : false,
+              "type" : "datetime",
+              "input" : true,
+              "suffix" : true
+            } ],
+            "type" : "column",
+            "input" : false,
+            "key" : "column",
+            "label" : "Column",
+            "index" : 0,
+            "clearOnHide" : true,
+            "conditional" : {
+              "show" : null,
+              "when" : null
+            }
+          }, {
+            "index" : 1,
+            "type" : "column",
+            "input" : false,
+            "key" : "column",
+            "label" : "Column",
+            "components" : [ {
+              "label" : {
+                "ru" : "Приоритет",
+                "en" : "Priority"
+              },
+              "key" : "priority",
+              "clearOnHide" : false,
+              "dataSrc" : "values",
+              "data" : {
+                "values" : [ {
+                  "label" : "High_priority",
+                  "value" : "1"
+                }, {
+                  "label" : "Middle_priority",
+                  "value" : "2"
+                }, {
+                  "label" : "Low_priority",
+                  "value" : "3"
+                } ],
+                "headers" : [ { } ]
+              },
+              "searchEnabled" : false,
+              "defaultValue" : "2",
+              "optionalWhenDisabled" : false,
+              "type" : "ecosSelect",
+              "input" : true
+            } ],
+            "clearOnHide" : true,
+            "conditional" : {
+              "show" : null,
+              "when" : null
+            }
+          } ],
+          "key" : "columns",
+          "type" : "columns",
+          "input" : false
+        }, {
+          "label" : {
+            "ru" : "Инициатор",
+            "en" : "Initiator"
+          },
+          "key" : "initiator",
+          "disabled" : true,
+          "currentUserByDefault" : true,
+          "defaultValue" : "",
+          "refreshOn" : [ ],
+          "optionalWhenDisabled" : false,
+          "type" : "selectOrgstruct",
+          "input" : true
+        } ]
+      }, {
+        "title" : "Исполнитель",
+        "key" : "panel",
+        "type" : "panel",
+        "input" : false,
+        "components" : [ {
+          "columns" : [ {
+            "components" : [ ],
+            "type" : "column",
+            "input" : false,
+            "key" : "column",
+            "label" : "Column",
+            "index" : 0,
+            "clearOnHide" : true,
+            "conditional" : {
+              "show" : null,
+              "when" : null
+            }
+          }, {
+            "index" : 1,
+            "type" : "column",
+            "input" : false,
+            "key" : "column",
+            "label" : "Column",
+            "components" : [ {
+              "label" : {
+                "ru" : "Проверять результаты",
+                "en" : "Verify"
+              },
+              "key" : "verify",
+              "refreshOn" : [ ],
+              "optionalWhenDisabled" : false,
+              "type" : "checkbox",
+              "input" : true
+            } ],
+            "clearOnHide" : true,
+            "conditional" : {
+              "show" : null,
+              "when" : null
+            }
+          } ],
+          "key" : "columns3",
+          "type" : "columns",
+          "input" : false
+        }, {
+          "columns" : [ {
+            "components" : [ {
+              "label" : {
+                "ru" : "Исполнитель",
+                "en" : "Performer"
+              },
+              "key" : "performer",
+              "multiple" : true,
+              "validate" : {
+                "required" : true
+              },
+              "reorder" : false,
+              "clearOnHide" : false,
+              "defaultValue" : [ ],
+              "refreshOn" : [ ],
+              "optionalWhenDisabled" : false,
+              "type" : "selectOrgstruct",
+              "input" : true
+            } ],
+            "type" : "column",
+            "input" : false,
+            "key" : "column",
+            "label" : "Column",
+            "index" : 0,
+            "clearOnHide" : true,
+            "conditional" : {
+              "show" : null,
+              "when" : null
+            }
+          }, {
+            "index" : 1,
+            "type" : "column",
+            "input" : false,
+            "key" : "column",
+            "label" : "Column",
+            "components" : [ {
+              "label" : {
+                "ru" : "Проверяющий",
+                "en" : "Verifier"
+              },
+              "key" : "verifier",
+              "validate" : {
+                "required" : true
+              },
+              "clearOnHide" : false,
+              "allowedAuthorityType" : "USER",
+              "currentUserByDefault" : true,
+              "defaultValue" : "",
+              "refreshOn" : [ ],
+              "optionalWhenDisabled" : false,
+              "conditional" : {
+                "show" : "true",
+                "when" : "verify",
+                "eq" : "true"
+              },
+              "type" : "selectOrgstruct",
+              "input" : true
+            } ],
+            "clearOnHide" : true,
+            "conditional" : {
+              "show" : null,
+              "when" : null
+            }
+          } ],
+          "key" : "columns4",
+          "type" : "columns",
+          "input" : false
+        } ]
+      }, {
+        "label" : {
+          "ru" : "Panel"
+        },
+        "key" : "panel3",
+        "title" : {
+          "ru" : "Связанные элементы",
+          "en" : "Links"
+        },
+        "refreshOn" : [ ],
+        "optionalWhenDisabled" : false,
+        "type" : "panel",
+        "input" : false,
+        "components" : [ {
+          "label" : {
+            "ru" : "Связанные элементы",
+            "en" : "Links"
+          },
+          "key" : "link",
+          "hideDeleteRowButton" : true,
+          "modalTitle" : "",
+          "journalId" : "search",
+          "queryData" : "",
+          "refreshOn" : [ ],
+          "calculateValue" : "const { assocRecordRef = \"\" } = data || \"\";\nvalue = assocRecordRef;",
+          "allowCalculateOverride" : true,
+          "optionalWhenDisabled" : false,
+          "type" : "selectJournal",
+          "input" : true
+        } ]
+      } ]
+    }, {
+      "columns" : [ {
+        "components" : [ {
+          "label" : "Cancel",
+          "action" : "event",
+          "state" : "",
+          "showValidations" : false,
+          "event" : "cancel",
+          "block" : true,
+          "key" : "submit2",
+          "type" : "button",
+          "input" : true
+        } ],
+        "md" : 3,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "label" : "Column",
+        "index" : 0,
+        "clearOnHide" : true,
+        "conditional" : {
+          "show" : null,
+          "when" : null
+        }
+      }, {
+        "md" : 3,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "label" : "Column",
+        "index" : 1,
+        "components" : [ ],
+        "clearOnHide" : true,
+        "conditional" : {
+          "show" : null,
+          "when" : null
+        }
+      }, {
+        "md" : 3,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "label" : "Column",
+        "index" : 2,
+        "components" : [ ],
+        "clearOnHide" : true,
+        "conditional" : {
+          "show" : null,
+          "when" : null
+        }
+      }, {
+        "md" : 3,
+        "type" : "column",
+        "input" : false,
+        "key" : "column",
+        "label" : "Column",
+        "index" : 3,
+        "components" : [ {
+          "label" : {
+            "ru" : "Создать",
+            "en" : "Create"
+          },
+          "key" : "submit",
+          "state" : "",
+          "theme" : "primary",
+          "block" : true,
+          "disableOnInvalid" : true,
+          "refreshOn" : [ ],
+          "optionalWhenDisabled" : false,
+          "type" : "button",
+          "input" : true,
+          "headers" : [ { } ]
+        } ],
+        "clearOnHide" : true,
+        "conditional" : {
+          "show" : null,
+          "when" : null
+        }
+      } ],
+      "key" : "columns2",
+      "type" : "columns",
+      "input" : false
+    } ],
+    "formId" : "delete-me"
+  },
+  "notExists" : false
+}

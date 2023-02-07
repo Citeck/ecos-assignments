@@ -1,0 +1,96 @@
+---
+id: delete-me
+name:
+  ru: Задача
+storageType: ECOS_MODEL
+parentRef: emodel/type@case
+formRef: uiserv/form@delete-me
+journalRef: uiserv/journal@DEFAULT_JOURNAL
+inheritForm: false
+actions:
+  - uiserv/action@createCamundaUserTask
+  - uiserv/action@delete
+defaultCreateVariant: true
+model:
+  roles:
+    - id: initiator
+      name:
+        ru: Инициатор
+        en: Initiator
+      attributes:
+        - initiator
+    - id: performer
+      name:
+        ru: Исполнитель
+        en: Performer
+      attributes:
+        - performer
+    - id: verifier
+      name:
+        ru: Проверяющий
+        en: Verifier
+      attributes:
+        - verifier
+  statuses:
+    - id: taskExecution
+      name:
+        ru: Выполнение задачи
+        en: Task execution
+    - id: checkResult
+      name:
+        ru: Проверка выполнения задачи
+        en: Check the result
+    - id: rework
+      name:
+        ru: Доработка
+        en: Rework
+    - id: taskComplete
+      name:
+        ru: Задача выполнена
+        en: Task complete
+  attributes:
+    - id: title
+      name:
+        ru: Название
+        en: Title
+    - id: description
+      name:
+        ru: Описание
+        en: Description
+    - id: dueDate
+      name:
+        ru: Срок
+        en: Deadline
+      type: DATETIME
+    - id: priority
+      name:
+        ru: Приоритет
+        en: Priority
+      type: NUMBER
+    - id: performer
+      name:
+        ru: Исполнитель
+        en: Performer
+      type: AUTHORITY
+    - id: verify
+      name:
+        ru: Проверять результаты
+        en: Verify
+      type: BOOLEAN
+    - id: verifier
+      name:
+        en: Verifier
+        ru: Проверяющий
+    - id: link
+      name:
+        ru: Связанные элементы
+        en: Links
+      type: ASSOC
+      config:
+        typeRef: emodel/type@case
+        child: false
+    - id: initiator
+      name:
+        ru: Инициатор
+        en: Initiator
+      type: AUTHORITY
