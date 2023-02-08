@@ -1,11 +1,11 @@
 ---
-id: createCamundaUserTask
+id: create-camunda-user-task
 name:
   ru: Создать задачу по документу
   en: Create perform
 icon: icon-plus
 type: create
 config:
-  typeRef: emodel/type@delete-me
+  typeRef: emodel/type@tasks-cat-doctype
   attributes:
     assocRecordRef: '${recordRef}'

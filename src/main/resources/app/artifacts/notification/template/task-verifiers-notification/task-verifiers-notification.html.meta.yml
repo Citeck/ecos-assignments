@@ -1,0 +1,19 @@
+{
+  "id" : "task-verifiers-notification",
+  "name" : "Task Verifiers Notification",
+  "notificationTitle" : {
+    "en" : "New task: Performance inspectation, document - ${title}",
+    "ru" : "Новая задача: Проверка исполнения, документ - ${title}"
+  },
+  "tags" : [ ],
+  "model" : {
+    "date" : "$now?str",
+    "sender" : "initiator?id",
+    "senderFirstName" : "initiator.firstName?str",
+    "senderLastName" : "initiator.lastName?str",
+    "documentId" : "?id",
+    "web_url" : "?disp",
+    "title" : "?disp"
+  },
+  "multiTemplateConfig" : [ ]
+}

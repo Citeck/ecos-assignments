@@ -1,0 +1,19 @@
+{
+  "id" : "task-performers-notification",
+  "name" : "Task Performers Notification",
+  "notificationTitle" : {
+    "ru" : "Новая задача: Выполнение задачи, документ - ${title}",
+    "en" : "New task: Task perform, document - ${title}"
+  },
+  "tags" : [ ],
+  "model" : {
+    "date" : "$now?str",
+    "sender" : "initiator?id",
+    "senderFirstName" : "initiator.firstName?str",
+    "senderLastName" : "initiator.lastName?str",
+    "documentId" : "?id",
+    "title" : "?disp",
+    "description" : "description"
+  },
+  "multiTemplateConfig" : [ ]
+}

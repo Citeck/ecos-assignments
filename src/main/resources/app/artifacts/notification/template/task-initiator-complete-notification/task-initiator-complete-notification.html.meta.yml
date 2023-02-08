@@ -1,0 +1,19 @@
+{
+  "id" : "task-initiator-complete-notification",
+  "name" : "Task Initiator Complete Notification",
+  "notificationTitle" : {
+    "en" : "Task complete, document - ${title}",
+    "ru" : "Задача выполнена, документ - ${title}"
+  },
+  "tags" : [ ],
+  "model" : {
+    "date" : "$now?str",
+    "sender" : "initiator?id",
+    "senderFirstName" : "initiator.firstName?str",
+    "senderLastName" : "initiator.lastName?str",
+    "documentId" : "?id",
+    "title" : "?disp",
+    "description" : "description"
+  },
+  "multiTemplateConfig" : [ ]
+}

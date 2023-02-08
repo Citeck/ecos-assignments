@@ -1,0 +1,43 @@
+---
+id: ecos-tasks
+name:
+  ru: Задача
+  en: Task
+typeRef: emodel/type@tasks-cat-doctype
+actions:
+  - uiserv/action@download-zip
+  - uiserv/action@edit
+  - uiserv/action@view-dashboard
+  - uiserv/action@view-dashboard-in-background
+  - uiserv/action@delete
+columns:
+  - id: created
+    name:
+      ru: Дата создания
+      en: Created
+    type: DATE
+    attribute: _created
+  - id: _disp
+    name:
+      ru: Имя
+      en: Name
+  - id: title
+    name:
+      ru: Название
+      en: Title
+    type: TEXT
+  - id: documentStatus
+    name:
+      ru: Статус
+      en: Status
+    attribute: _status
+  - id: initiator
+    name:
+      ru: Инициатор
+      en: Initiator
+    type: AUTHORITY
+  - id: dueDate
+    name:
+      ru: Срок
+      en: Deadline
+    type: DATETIME

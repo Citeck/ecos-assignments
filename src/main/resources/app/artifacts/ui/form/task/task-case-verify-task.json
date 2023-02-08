@@ -1,0 +1,133 @@
+{
+  "id": "task-case-verify-task",
+  "formKey": "task-case-verify-task",
+  "title": {
+    "en": "Проверка задачи"
+  },
+  "description": {},
+  "customModule": "",
+  "typeRef": "",
+  "width": "",
+  "system": false,
+  "i18n": {
+    "ru": {},
+    "en": {}
+  },
+  "definition": {
+    "components": [
+      {
+        "label": {
+          "en": "Verifier comment",
+          "ru": "Комментарий исполнителя"
+        },
+        "key": "result",
+        "disabled": true,
+        "defaultValue": "",
+        "refreshOn": [],
+        "optionalWhenDisabled": false,
+        "type": "textarea",
+        "input": true
+      },
+      {
+        "label": {
+          "en": "Verifier comment",
+          "ru": "Комментарий проверяющего"
+        },
+        "key": "verifierComment",
+        "defaultValue": "",
+        "refreshOn": [],
+        "optionalWhenDisabled": false,
+        "type": "textarea",
+        "input": true
+      },
+      {
+        "type": "columns",
+        "input": false,
+        "columns": [
+          {
+            "components": [],
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "type": "column",
+            "md": 4,
+            "key": "column",
+            "index": 0,
+            "clearOnHide": true,
+            "label": "Column",
+            "input": false
+          },
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "На доработку",
+                  "en": "Rework"
+                },
+                "key": "outcome_Rework",
+                "state": "",
+                "block": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true,
+                "headers": [
+                  {}
+                ]
+              }
+            ],
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "type": "column",
+            "md": 4,
+            "key": "column",
+            "index": 1,
+            "clearOnHide": true,
+            "label": "Column",
+            "input": false
+          },
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "Принято",
+                  "en": "Approve"
+                },
+                "key": "outcome_Approve",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "disableOnInvalid": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true,
+                "headers": [
+                  {}
+                ]
+              }
+            ],
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "type": "column",
+            "md": 4,
+            "key": "column",
+            "index": 2,
+            "clearOnHide": true,
+            "label": "Column",
+            "input": false
+          }
+        ],
+        "key": "columns2"
+      }
+    ],
+    "formId": "task-case-verify-task"
+  },
+  "attributes": {},
+  "notExists": false
+}
