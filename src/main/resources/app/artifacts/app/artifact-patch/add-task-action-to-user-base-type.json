@@ -5,7 +5,7 @@
     "en": "Add action to user base type"
   },
   "order": 0,
-  "target": "emodel/type@user-base",
+  "target": "model/type$user-base",
   "type": "json",
   "config": {
     "operations": [
