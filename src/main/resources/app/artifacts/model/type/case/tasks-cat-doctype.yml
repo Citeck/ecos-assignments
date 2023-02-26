@@ -10,9 +10,8 @@ journalRef: uiserv/journal@ecos-tasks
 inheritForm: false
 inheritActions: false
 dispNameTemplate:
-  ru: Задача №${taskNumber}
-  en: Task №${taskNumber}
-numTemplateRef: emodel/num-template@task-num-template
+  ru: "Задача: ${title}"
+  en: "Task: ${title}"
 defaultCreateVariant: true
 model:
   roles:
@@ -97,12 +96,3 @@ model:
         ru: Инициатор
         en: Initiator
       type: AUTHORITY
-    - id: taskNumber
-      name:
-        ru: Регистрационный номер
-        en: Register number
-      computed:
-        type: COUNTER
-        config:
-          numTemplateRef: emodel/num-template@task-num-template
-        storingType: ON_CREATE

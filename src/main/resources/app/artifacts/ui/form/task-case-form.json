@@ -11,10 +11,16 @@
   "system": false,
   "i18n": {
     "en": {
-      "required": "{{field}} is required"
+      "required": "{{field}} is required",
+      "High_priority": "High",
+      "Middle_priority": "Middle",
+      "Low_priority": "Low"
     },
     "ru": {
-      "required": "Поле {{field}} не может быть пустым"
+      "required": "Поле {{field}} не может быть пустым",
+      "High_priority": "Высокий",
+      "Middle_priority": "Средний",
+      "Low_priority": "Низкий"
     }
   },
   "definition": {

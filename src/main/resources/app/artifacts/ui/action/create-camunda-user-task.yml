@@ -1,8 +1,8 @@
 ---
 id: create-camunda-user-task
 name:
-  ru: Создать задачу по документу
-  en: Create perform
+  ru: Создать задачу
+  en: Create task
 icon: icon-plus
 type: create
 config:
