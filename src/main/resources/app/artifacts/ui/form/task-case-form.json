@@ -49,7 +49,6 @@
                 "defaultValue": "",
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
-                "customConditional": "console.log(data);",
                 "type": "textfield",
                 "input": true,
                 "inputMasks": [
