@@ -50,7 +50,7 @@
                                              </p>
 
                                               <p>Для просмотра задачи нажмите на ссылку:</p>
-                                              <#assign taskUrl = web_url + "/v2/dashboard?recordRef=" + documentId />
+                                              <#assign taskUrl = meta.getWebUrl() + "/v2/dashboard?recordRef=" + documentId />
                                               <p><a href="${taskUrl}">${taskUrl}</a></p>
 
                                           </div>

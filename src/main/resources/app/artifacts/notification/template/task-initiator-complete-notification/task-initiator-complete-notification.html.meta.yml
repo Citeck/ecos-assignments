@@ -2,8 +2,8 @@
   "id" : "task-initiator-complete-notification",
   "name" : "Task Initiator Complete Notification",
   "notificationTitle" : {
-    "en" : "Task complete, document - ${title}",
-    "ru" : "Задача выполнена, документ - ${title}"
+    "en" : "Task complete, ${title}",
+    "ru" : "Задача выполнена, ${title}"
   },
   "tags" : [ ],
   "model" : {
@@ -12,7 +12,7 @@
     "senderFirstName" : "initiator.firstName?str",
     "senderLastName" : "initiator.lastName?str",
     "documentId" : "?id",
-    "title" : "?disp",
+    "title" : "title",
     "description" : "description"
   },
   "multiTemplateConfig" : [ ]
