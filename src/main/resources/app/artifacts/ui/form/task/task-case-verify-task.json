@@ -17,10 +17,10 @@
     "components": [
       {
         "label": {
-          "en": "Verifier comment",
+          "en": "Performer comment",
           "ru": "Комментарий исполнителя"
         },
-        "key": "result",
+        "key": "performer_comment",
         "disabled": true,
         "defaultValue": "",
         "refreshOn": [],
@@ -33,7 +33,7 @@
           "en": "Verifier comment",
           "ru": "Комментарий проверяющего"
         },
-        "key": "verifierComment",
+        "key": "comment",
         "defaultValue": "",
         "refreshOn": [],
         "optionalWhenDisabled": false,
@@ -44,20 +44,6 @@
         "type": "columns",
         "input": false,
         "columns": [
-          {
-            "components": [],
-            "conditional": {
-              "show": null,
-              "when": null
-            },
-            "type": "column",
-            "md": 4,
-            "key": "column",
-            "index": 0,
-            "clearOnHide": true,
-            "label": "Column",
-            "input": false
-          },
           {
             "components": [
               {
@@ -84,7 +70,7 @@
             "type": "column",
             "md": 4,
             "key": "column",
-            "index": 1,
+            "index": 0,
             "clearOnHide": true,
             "label": "Column",
             "input": false
@@ -110,6 +96,20 @@
                 ]
               }
             ],
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "type": "column",
+            "md": 4,
+            "key": "column",
+            "index": 1,
+            "clearOnHide": true,
+            "label": "Column",
+            "input": false
+          },
+          {
+            "components": [],
             "conditional": {
               "show": null,
               "when": null

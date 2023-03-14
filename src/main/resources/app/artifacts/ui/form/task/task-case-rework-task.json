@@ -20,7 +20,7 @@
           "ru": "Комментарий проверяющего",
           "en": "Verifier comment"
         },
-        "key": "verifierComment",
+        "key": "verifier_comment",
         "disabled": true,
         "defaultValue": "",
         "refreshOn": [],
@@ -33,7 +33,7 @@
           "ru": "Результат выполнения задачи",
           "en": "Result"
         },
-        "key": "result",
+        "key": "comment",
         "defaultValue": "",
         "refreshOn": [],
         "optionalWhenDisabled": false,
@@ -45,7 +45,27 @@
         "input": false,
         "columns": [
           {
-            "components": [],
+            "components": [
+              {
+                "label": {
+                  "en": "Complete",
+                  "ru": "Выполнить задачу повторно"
+                },
+                "key": "outcome_Complete",
+                "state": "",
+                "labelPosition": "",
+                "theme": "primary",
+                "block": true,
+                "disableOnInvalid": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true,
+                "headers": [
+                  {}
+                ]
+              }
+            ],
             "conditional": {
               "show": null,
               "when": null
@@ -73,26 +93,7 @@
             "input": false
           },
           {
-            "components": [
-              {
-                "label": {
-                  "en": "Complete",
-                  "ru": "Выполнить задачу повторно"
-                },
-                "key": "outcome_Complete",
-                "state": "",
-                "theme": "primary",
-                "block": true,
-                "disableOnInvalid": true,
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
-                "type": "button",
-                "input": true,
-                "headers": [
-                  {}
-                ]
-              }
-            ],
+            "components": [],
             "conditional": {
               "show": null,
               "when": null
