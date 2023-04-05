@@ -316,25 +316,82 @@
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
+            "customConditional": "show = instance.options.formMode === 'CREATE';",
             "type": "panel",
             "input": false,
             "components": [
               {
                 "label": {
-                  "ru": "Связанные элементы",
-                  "en": "Links"
+                  "ru": "Columns"
                 },
-                "key": "link",
-                "hideDeleteRowButton": true,
-                "modalTitle": "",
-                "journalId": "search",
-                "queryData": "",
-                "refreshOn": [],
-                "calculateValue": "const { assocRecordRef = \"\" } = data || \"\";\nvalue = assocRecordRef;",
-                "allowCalculateOverride": true,
-                "optionalWhenDisabled": false,
-                "type": "selectJournal",
-                "input": true
+                "key": "columns5",
+                "columns": [
+                  {
+                    "components": [
+                      {
+                        "label": {
+                          "en": "Select type",
+                          "ru": "Выбрать тип"
+                        },
+                        "key": "caseType",
+                        "persistent": false,
+                        "clearOnHide": false,
+                        "dataSrc": "custom",
+                        "data": {
+                          "headers": [
+                            {
+                              "key": "",
+                              "value": ""
+                            }
+                          ],
+                          "custom": "const {caseTypes} = data || {};\nconst {records} = caseTypes || [];\nvalues = records;"
+                        },
+                        "defaultValue": "",
+                        "refreshOn": [
+                          "caseTypes"
+                        ],
+                        "optionalWhenDisabled": false,
+                        "type": "ecosSelect",
+                        "input": true
+                      }
+                    ],
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "index": 0
+                  },
+                  {
+                    "index": 1,
+                    "type": "column",
+                    "input": false,
+                    "key": "column",
+                    "components": [
+                      {
+                        "label": {
+                          "ru": "Выбрать связанные элементы",
+                          "en": "Select linked elements"
+                        },
+                        "key": "assoc:associatedWith",
+                        "multiple": true,
+                        "clearOnHide": false,
+                        "modalTitle": "",
+                        "journalId": "${caseType}",
+                        "queryData": "",
+                        "defaultValue": [],
+                        "refreshOn": [
+                          "caseType"
+                        ],
+                        "allowCalculateOverride": true,
+                        "optionalWhenDisabled": false,
+                        "type": "selectJournal",
+                        "input": true
+                      }
+                    ]
+                  }
+                ],
+                "oneColumnInViewMode": false,
+                "type": "columns",
+                "input": false
               }
             ]
           }
@@ -433,6 +490,27 @@
         "key": "columns2",
         "type": "columns",
         "input": false
+      },
+      {
+        "label": "Запрос данных",
+        "source": {
+          "type": "recordsQuery",
+          "recordsQuery": {
+            "query": "value = {\n    sourceId: 'emodel/type',\n    query: {'att': 'parentRef?str', 't':'eq', 'val':'emodel/type@case'},\n    language: 'predicate'\n};",
+            "attributes": {
+              "value": "journalRef?str",
+              "label": "journalRef"
+            },
+            "isSingle": false
+          },
+          "forceLoad": false
+        },
+        "update": {
+          "type": "once"
+        },
+        "key": "caseTypes",
+        "type": "asyncData",
+        "input": true
       }
     ],
     "formId": "task-case-form"

@@ -12,6 +12,14 @@ inheritActions: false
 dispNameTemplate:
   ru: "Задача: ${title}"
   en: "Task: ${title}"
+associations:
+  - id: assoc:associatedWith
+    name:
+      ru: Связан с
+      en: Associated with
+    target: emodel/type@user-base
+    journalsFromTarget: true
+    direction: BOTH
 defaultCreateVariant: true
 model:
   roles:
@@ -83,14 +91,6 @@ model:
       name:
         en: Verifier
         ru: Проверяющий
-    - id: link
-      name:
-        ru: Связанные элементы
-        en: Links
-      type: ASSOC
-      config:
-        typeRef: emodel/type@case
-        child: false
     - id: initiator
       name:
         ru: Инициатор
