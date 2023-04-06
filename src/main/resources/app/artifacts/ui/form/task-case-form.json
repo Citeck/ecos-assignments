@@ -32,8 +32,16 @@
         "input": false,
         "components": [
           {
-            "title": "Общее",
+            "label": {
+              "ru": "Panel"
+            },
             "key": "panel2",
+            "title": {
+              "ru": "Общее",
+              "en": "Common"
+            },
+            "refreshOn": [],
+            "optionalWhenDisabled": false,
             "type": "panel",
             "input": false,
             "components": [
@@ -80,14 +88,9 @@
                           "en": "Deadline"
                         },
                         "key": "dueDate",
-                        "format": "yyyy-MM-dd",
                         "datePicker": {
                           "minDate": "",
                           "maxDate": ""
-                        },
-                        "enableTime": false,
-                        "timePicker": {
-                          "showMeridian": false
                         },
                         "defaultValue": "",
                         "refreshOn": [],
@@ -177,8 +180,16 @@
             ]
           },
           {
-            "title": "Исполнитель",
+            "label": {
+              "ru": "Panel"
+            },
             "key": "panel",
+            "title": {
+              "ru": "Исполнитель",
+              "en": "Performer"
+            },
+            "refreshOn": [],
+            "optionalWhenDisabled": false,
             "type": "panel",
             "input": false,
             "components": [
