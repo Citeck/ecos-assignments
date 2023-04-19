@@ -22,7 +22,7 @@
                                                 </td>
                                                 <td>
                                                    <div style="font-size: 22px; padding-bottom: 4px;">
-                                                    You are assigned with the task
+                                                    Вам назначено поручение
                                                    </div>
                                                    <div style="font-size: 13px;">
                                                       ${date?datetime.iso?string.full}
@@ -31,25 +31,25 @@
                                              </tr>
                                           </table>
                                           <div style="font-size: 14px; margin: 12px 0px 24px 0px; padding-top: 10px; border-top: 1px solid #aaaaaa;">
-                                              The following task is assigned to you:
-                                              <p><b>Performance inspectation</b></p>
+                                              Вам назначено следующее поручение:
+                                              <p><b>${description}</b></p>
 
                                              <p>
                                                  <#if title??>
-                                                     File name:&nbsp;&nbsp;<b>${title!''}</b><br>
+                                                     Название файла:&nbsp;&nbsp;<b>${title!''}</b><br>
                                                  </#if>
 
-                                                 Task initiator:&nbsp;&nbsp;
+                                                 Инициатор поручения:&nbsp;&nbsp;
                                                  <b>
                                                  <#if sender??>
                                                     <#if senderLastName??>${senderLastName}</#if><#if senderFirstName??> ${senderFirstName}</#if>.
                                                  <#else>
-                                                     (Initiator is not specified).
+                                                     (Инициатор не указан).
                                                  </#if>
                                                  </b>
                                              </p>
 
-                                              <p>Click the link to see the task:</p>
+                                              <p>Для просмотра поручения нажмите на ссылку:</p>
                                               <#assign taskUrl = meta.getWebUrl() + "/v2/dashboard?recordRef=" + documentId />
                                               <p><a href="${taskUrl}">${taskUrl}</a></p>
 

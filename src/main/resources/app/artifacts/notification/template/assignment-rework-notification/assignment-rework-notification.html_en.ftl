@@ -31,25 +31,16 @@
                                              </tr>
                                           </table>
                                           <div style="font-size: 14px; margin: 12px 0px 24px 0px; padding-top: 10px; border-top: 1px solid #aaaaaa;">
-                                              Your task complete:
-                                              <p><b>${description}</b></p>
+                                              The following task is assigned to you:
+                                              <p><b>Decision of reworking the assignment</b></p>
 
                                              <p>
                                                  <#if title??>
                                                      File name:&nbsp;&nbsp;<b>${title!''}</b><br>
                                                  </#if>
-
-                                                 Task initiator:&nbsp;&nbsp;
-                                                 <b>
-                                                 <#if sender??>
-                                                    <#if senderLastName??>${senderLastName}</#if><#if senderFirstName??> ${senderFirstName}</#if>.
-                                                 <#else>
-                                                     (Initiator is not specified).
-                                                 </#if>
-                                                 </b>
                                              </p>
 
-                                              <p>Click the link to see the task:</p>
+                                              <p>Click the link to see the assignment:</p>
                                               <#assign taskUrl = meta.getWebUrl() + "/v2/dashboard?recordRef=" + documentId />
                                               <p><a href="${taskUrl}">${taskUrl}</a></p>
 

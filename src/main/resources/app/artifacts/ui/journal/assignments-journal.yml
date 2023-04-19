@@ -1,9 +1,9 @@
 ---
-id: ecos-tasks
+id: assignments-journal
 name:
-  ru: Задача
-  en: Task
-typeRef: emodel/type@tasks-cat-doctype
+  ru: Поручения
+  en: Assignments
+typeRef: emodel/type@assignment-type
 actions:
   - uiserv/action@download-zip
   - uiserv/action@edit

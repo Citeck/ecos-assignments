@@ -1,0 +1,19 @@
+{
+  "id": "add-assignment-action-to-user-base-type",
+  "name": {
+    "ru": "Добавить действие \"Создать поручение\" в базовый пользовательский тип",
+    "en": "Add action \"Create assignment\" to user-base type"
+  },
+  "order": 0,
+  "target": "model/type$user-base",
+  "type": "json",
+  "config": {
+    "operations": [
+      {
+        "op": "add",
+        "path": "actions",
+        "value": "uiserv/action@create-assignment"
+      }
+    ]
+  }
+}

@@ -1,8 +1,9 @@
 {
-  "id": "task-case-perform-task",
-  "formKey": "task-case-perform-task",
+  "id": "assignment-rework-task",
+  "formKey": "assignment-rework-task",
   "title": {
-    "en": "Выполнение задачи"
+    "ru": "Доработка поручения",
+    "en": "Assignment reworking"
   },
   "description": {},
   "customModule": "",
@@ -17,8 +18,21 @@
     "components": [
       {
         "label": {
-          "en": "Comment",
-          "ru": "Комментарий"
+          "ru": "Комментарий проверяющего",
+          "en": "Verifier comment"
+        },
+        "key": "verifier_comment",
+        "disabled": true,
+        "defaultValue": "",
+        "refreshOn": [],
+        "optionalWhenDisabled": false,
+        "type": "textarea",
+        "input": true
+      },
+      {
+        "label": {
+          "ru": "Результат выполнения задачи",
+          "en": "Result"
         },
         "key": "comment",
         "defaultValue": "",
@@ -36,12 +50,13 @@
               {
                 "label": {
                   "en": "Complete",
-                  "ru": "Выполнить"
+                  "ru": "Выполнить задачу повторно"
                 },
-                "key": "outcome_complete",
+                "key": "outcome_Complete",
                 "state": "",
-                "labelPosition": "right-left",
+                "labelPosition": "",
                 "theme": "primary",
+                "block": true,
                 "disableOnInvalid": true,
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
@@ -96,7 +111,7 @@
         "key": "columns2"
       }
     ],
-    "formId": "task-case-perform-task"
+    "formId": "assignment-rework-task"
   },
   "attributes": {},
   "notExists": false

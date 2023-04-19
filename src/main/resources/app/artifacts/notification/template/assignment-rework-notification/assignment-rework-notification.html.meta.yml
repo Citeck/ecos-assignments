@@ -1,6 +1,6 @@
 {
-  "id" : "task-initiator-perform-rework-notification",
-  "name" : "Task Perform Rework Notification",
+  "id" : "assignment-rework-notification",
+  "name" : "Assignment Rework Notification",
   "notificationTitle" : {
     "ru" : "Новая задача: Решение о повторном исполнении, ${title}",
     "en" : "New task: Decision of reworking, ${title}"

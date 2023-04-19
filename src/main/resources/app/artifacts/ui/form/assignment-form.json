@@ -1,8 +1,9 @@
 {
-  "id": "task-case-form",
-  "formKey": "task-case-form",
+  "id": "assignment-form",
+  "formKey": "assignment-form",
   "title": {
-    "en": "Задача Экос"
+    "ru": "Поручение",
+    "en": "Assignment"
   },
   "description": {},
   "customModule": "",
@@ -196,51 +197,6 @@
               {
                 "columns": [
                   {
-                    "components": [],
-                    "type": "column",
-                    "input": false,
-                    "key": "column",
-                    "label": "Column",
-                    "index": 0,
-                    "clearOnHide": true,
-                    "conditional": {
-                      "show": null,
-                      "when": null
-                    }
-                  },
-                  {
-                    "index": 1,
-                    "type": "column",
-                    "input": false,
-                    "key": "column",
-                    "label": "Column",
-                    "components": [
-                      {
-                        "label": {
-                          "ru": "Проверять результаты",
-                          "en": "Verify"
-                        },
-                        "key": "verify",
-                        "refreshOn": [],
-                        "optionalWhenDisabled": false,
-                        "type": "checkbox",
-                        "input": true
-                      }
-                    ],
-                    "clearOnHide": true,
-                    "conditional": {
-                      "show": null,
-                      "when": null
-                    }
-                  }
-                ],
-                "key": "columns3",
-                "type": "columns",
-                "input": false
-              },
-              {
-                "columns": [
-                  {
                     "components": [
                       {
                         "label": {
@@ -281,6 +237,17 @@
                     "components": [
                       {
                         "label": {
+                          "ru": "Проверять результаты",
+                          "en": "Verify"
+                        },
+                        "key": "verify",
+                        "refreshOn": [],
+                        "optionalWhenDisabled": false,
+                        "type": "checkbox",
+                        "input": true
+                      },
+                      {
+                        "label": {
                           "ru": "Проверяющий",
                           "en": "Verifier"
                         },
@@ -310,7 +277,7 @@
                     }
                   }
                 ],
-                "key": "columns4",
+                "key": "columns3",
                 "type": "columns",
                 "input": false
               }
@@ -395,7 +362,13 @@
                         "allowCalculateOverride": true,
                         "optionalWhenDisabled": false,
                         "type": "selectJournal",
-                        "input": true
+                        "input": true,
+                        "source": {
+                          "custom": {
+                            "columns": []
+                          },
+                          "type": "journal"
+                        }
                       }
                     ]
                   }
@@ -511,10 +484,8 @@
             "attributes": {
               "value": "journalRef?str",
               "label": "journalRef"
-            },
-            "isSingle": false
-          },
-          "forceLoad": false
+            }
+          }
         },
         "update": {
           "type": "once"
@@ -524,7 +495,7 @@
         "input": true
       }
     ],
-    "formId": "task-case-form"
+    "formId": "assignment-form"
   },
   "attributes": {},
   "notExists": false

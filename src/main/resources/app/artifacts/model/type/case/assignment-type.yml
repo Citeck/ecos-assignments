@@ -1,17 +1,17 @@
 ---
-id: tasks-cat-doctype
+id: assignment-type
 name:
-  ru: Задача
-  en: Task
+  ru: Поручение
+  en: Assignment
 storageType: ECOS_MODEL
 parentRef: emodel/type@case
-formRef: uiserv/form@task-case-form
-journalRef: uiserv/journal@ecos-tasks
+formRef: uiserv/form@assignment-form
+journalRef: uiserv/journal@assignments-journal
 inheritForm: false
 inheritActions: false
 dispNameTemplate:
-  ru: "Задача: ${title}"
-  en: "Task: ${title}"
+  ru: "Поручение: ${title}"
+  en: "Assignment: ${title}"
 associations:
   - id: assoc:associatedWith
     name:
@@ -42,22 +42,22 @@ model:
       attributes:
         - verifier
   statuses:
-    - id: taskExecution
+    - id: created
       name:
-        ru: Выполнение задачи
-        en: Task execution
-    - id: checkResult
+        ru: Создано
+        en: Created
+    - id: verification
       name:
-        ru: Проверка выполнения задачи
-        en: Check the result
+        ru: Проверка
+        en: Verification
     - id: rework
       name:
         ru: Доработка
         en: Rework
-    - id: taskComplete
+    - id: complete
       name:
-        ru: Задача выполнена
-        en: Task complete
+        ru: Выполнено
+        en: Complete
   attributes:
     - id: title
       name:

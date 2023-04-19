@@ -1,6 +1,6 @@
 {
   "id": "91115555-d888-4877-998a-30afc24616fd",
-  "typeRef": "emodel/type@tasks-cat-doctype",
+  "typeRef": "emodel/type@assignment-type",
   "appliedToRef": "",
   "authority": null,
   "scope": "",
@@ -21,7 +21,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "Основное"
+          "description": {
+            "en": "General",
+            "ru": "Основное"
+          }
         },
         {
           "dndId": "9b8f6180-1a68-4c8f-9e21-249ef2f1143d",
@@ -39,7 +42,10 @@
               "formMode": "EDIT"
             }
           },
-          "description": "Основное"
+          "description": {
+            "en": "General",
+            "ru": "Основное"
+          }
         },
         {
           "dndId": "aa0deb44-527e-4244-85cc-89757c0e07eb",
@@ -53,7 +59,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "Основное"
+          "description": {
+            "en": "General",
+            "ru": "Основное"
+          }
         },
         {
           "dndId": "38403ec8-6589-4747-beef-53e182ea14a5",
@@ -67,7 +76,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "Основное"
+          "description": {
+            "en": "General",
+            "ru": "Основное"
+          }
         },
         {
           "dndId": "68d2228b-5972-4b90-b465-d317e5f3d0a6",
@@ -81,7 +93,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "Основное"
+          "description": {
+            "en": "General",
+            "ru": "Основное"
+          }
         },
         {
           "dndId": "8ecb125c-7a47-4d3b-b871-5868fbe76498",
@@ -95,7 +110,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "Основное"
+          "description": {
+            "en": "General",
+            "ru": "Основное"
+          }
         },
         {
           "dndId": "951e31ba-70c0-4cab-988b-9d271cfa3632",
@@ -109,7 +127,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "Основное"
+          "description": {
+            "en": "General",
+            "ru": "Основное"
+          }
         },
         {
           "name": "events-history",
@@ -123,7 +144,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "История"
+          "description": {
+            "en": "History",
+            "ru": "История"
+          }
         },
         {
           "name": "versions-journal",
@@ -137,7 +161,10 @@
               "elementsDisplayCondition": {}
             }
           },
-          "description": "История"
+          "description": {
+            "en": "History",
+            "ru": "История"
+          }
         },
         {
           "dndId": "9818c1d8-bc41-464f-9824-8d3cd2cf03f2",
@@ -165,14 +192,20 @@
               ]
             }
           },
-          "description": "Документы"
+          "description": {
+            "ru": "Документы",
+            "en": "Documents"
+          }
         }
       ],
       "desktop": [
         {
           "id": "layout_799ac5e5-9eab-4c08-af80-5ed48d768229",
           "tab": {
-            "label": "Основное",
+            "label": {
+              "en": "General",
+              "ru": "Основное"
+            },
             "idLayout": "layout_799ac5e5-9eab-4c08-af80-5ed48d768229"
           },
           "type": "2-columns-big-small",
@@ -198,7 +231,10 @@
         {
           "id": "layout_18a3a08f-e70d-476b-911e-0730c58f97ed",
           "tab": {
-            "label": "История",
+            "label": {
+              "en": "History",
+              "ru": "История"
+            },
             "idLayout": "layout_18a3a08f-e70d-476b-911e-0730c58f97ed"
           },
           "type": "2-columns-big-small",
@@ -219,7 +255,10 @@
         {
           "id": "layout_35cd006c-9ae1-4148-9e25-3a78989fd690",
           "tab": {
-            "label": "Документы",
+            "label": {
+              "ru": "Документы",
+              "en": "Documents"
+            },
             "idLayout": "layout_35cd006c-9ae1-4148-9e25-3a78989fd690"
           },
           "type": "1-column",
@@ -236,7 +275,10 @@
         {
           "id": "layout_b4b01e70-e01c-457d-abfa-aaaf0a4ca691",
           "tab": {
-            "label": "Свойства",
+            "label": {
+              "ru": "Свойства",
+              "en": "Properties"
+            },
             "idLayout": "layout_b4b01e70-e01c-457d-abfa-aaaf0a4ca691"
           },
           "type": "mobile",
@@ -253,7 +295,10 @@
         {
           "id": "layout_c5b3186f-5a78-4d92-a730-1c8086562141",
           "tab": {
-            "label": "Действия",
+            "label": {
+              "ru": "Действия",
+              "en": "Actions"
+            },
             "idLayout": "layout_c5b3186f-5a78-4d92-a730-1c8086562141"
           },
           "type": "mobile",
@@ -269,7 +314,10 @@
         {
           "id": "layout_69e552d9-1323-42b4-b8ac-af176a6084fc",
           "tab": {
-            "label": "Документы",
+            "label": {
+              "ru": "Документы",
+              "en": "Documents"
+            },
             "idLayout": "layout_69e552d9-1323-42b4-b8ac-af176a6084fc"
           },
           "type": "mobile",
@@ -284,7 +332,10 @@
         {
           "id": "layout_07d39068-7d9b-4d4e-822a-c2db4913cb6d",
           "tab": {
-            "label": "Связи документа",
+            "label": {
+              "ru": "Связи документа",
+              "en": "Links"
+            },
             "idLayout": "layout_07d39068-7d9b-4d4e-822a-c2db4913cb6d"
           },
           "type": "mobile",
@@ -299,7 +350,10 @@
         {
           "id": "layout_b3a3755f-12c4-4b2c-9c87-10821681b76c",
           "tab": {
-            "label": "Комментарии",
+            "label": {
+              "ru": "Комментарии",
+              "en": "Comments"
+            },
             "idLayout": "layout_b3a3755f-12c4-4b2c-9c87-10821681b76c"
           },
           "type": "mobile",
@@ -314,7 +368,10 @@
         {
           "id": "layout_0ae86778-b9a2-4f1b-8bb8-43891c1539cd",
           "tab": {
-            "label": "История событий",
+            "label": {
+              "ru": "История событий",
+              "en": "History"
+            },
             "idLayout": "layout_0ae86778-b9a2-4f1b-8bb8-43891c1539cd"
           },
           "type": "mobile",
@@ -329,7 +386,10 @@
         {
           "id": "layout_8b060391-384f-4040-a16b-18ed74a8959f",
           "tab": {
-            "label": "Журнал версий",
+            "label": {
+              "ru": "Журнал версий",
+              "en": "Version journal"
+            },
             "idLayout": "layout_8b060391-384f-4040-a16b-18ed74a8959f"
           },
           "type": "mobile",

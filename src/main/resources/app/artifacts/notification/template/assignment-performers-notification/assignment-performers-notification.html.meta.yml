@@ -1,9 +1,9 @@
 {
-  "id" : "task-initiator-complete-notification",
-  "name" : "Task Initiator Complete Notification",
+  "id" : "assignment-performers-notification",
+  "name" : "Assignment Performers Notification",
   "notificationTitle" : {
-    "en" : "Task complete, ${title}",
-    "ru" : "Задача выполнена, ${title}"
+    "ru" : "Новое поручение: ${title}",
+    "en" : "New assignment: ${title}"
   },
   "tags" : [ ],
   "model" : {

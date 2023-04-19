@@ -1,9 +1,9 @@
 {
-  "id" : "task-performers-notification",
-  "name" : "Task Performers Notification",
+  "id" : "assignment-verifiers-notification",
+  "name" : "Assignment Verifiers Notification",
   "notificationTitle" : {
-    "ru" : "Новая задача: ${title}",
-    "en" : "New task: ${title}"
+    "en" : "New task: Performance inspectation, ${title}",
+    "ru" : "Новая задача: Проверка исполнения, ${title}"
   },
   "tags" : [ ],
   "model" : {
@@ -12,8 +12,7 @@
     "senderFirstName" : "initiator.firstName?str",
     "senderLastName" : "initiator.lastName?str",
     "documentId" : "?id",
-    "title" : "title",
-    "description" : "description"
+    "title" : "title"
   },
   "multiTemplateConfig" : [ ]
 }

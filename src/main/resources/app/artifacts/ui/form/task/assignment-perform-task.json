@@ -1,8 +1,9 @@
 {
-  "id": "task-case-verify-task",
-  "formKey": "task-case-verify-task",
+  "id": "assignment-perform-task",
+  "formKey": "assignment-perform-task",
   "title": {
-    "en": "Проверка задачи"
+    "ru": "Выполнение поручения",
+    "en": "Assignment performing"
   },
   "description": {},
   "customModule": "",
@@ -17,21 +18,8 @@
     "components": [
       {
         "label": {
-          "en": "Performer comment",
-          "ru": "Комментарий исполнителя"
-        },
-        "key": "performer_comment",
-        "disabled": true,
-        "defaultValue": "",
-        "refreshOn": [],
-        "optionalWhenDisabled": false,
-        "type": "textarea",
-        "input": true
-      },
-      {
-        "label": {
-          "en": "Verifier comment",
-          "ru": "Комментарий проверяющего"
+          "en": "Comment",
+          "ru": "Комментарий"
         },
         "key": "comment",
         "defaultValue": "",
@@ -48,12 +36,14 @@
             "components": [
               {
                 "label": {
-                  "ru": "На доработку",
-                  "en": "Rework"
+                  "en": "Complete",
+                  "ru": "Выполнить"
                 },
-                "key": "outcome_Rework",
+                "key": "outcome_complete",
                 "state": "",
-                "block": true,
+                "labelPosition": "right-left",
+                "theme": "primary",
+                "disableOnInvalid": true,
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
                 "type": "button",
@@ -76,26 +66,7 @@
             "input": false
           },
           {
-            "components": [
-              {
-                "label": {
-                  "ru": "Принято",
-                  "en": "Approve"
-                },
-                "key": "outcome_Approve",
-                "state": "",
-                "theme": "primary",
-                "block": true,
-                "disableOnInvalid": true,
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
-                "type": "button",
-                "input": true,
-                "headers": [
-                  {}
-                ]
-              }
-            ],
+            "components": [],
             "conditional": {
               "show": null,
               "when": null
@@ -126,7 +97,7 @@
         "key": "columns2"
       }
     ],
-    "formId": "task-case-verify-task"
+    "formId": "assignment-perform-task"
   },
   "attributes": {},
   "notExists": false

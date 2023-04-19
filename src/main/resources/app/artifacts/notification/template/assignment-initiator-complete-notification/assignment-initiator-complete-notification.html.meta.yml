@@ -1,9 +1,9 @@
 {
-  "id" : "task-verifiers-notification",
-  "name" : "Task Verifiers Notification",
+  "id" : "assignment-initiator-complete-notification",
+  "name" : "Assignment Initiator Complete Notification",
   "notificationTitle" : {
-    "en" : "New task: Performance inspectation, ${title}",
-    "ru" : "Новая задача: Проверка исполнения, ${title}"
+    "en" : "Assignment complete, ${title}",
+    "ru" : "Поручение выполнено, ${title}"
   },
   "tags" : [ ],
   "model" : {
@@ -12,7 +12,8 @@
     "senderFirstName" : "initiator.firstName?str",
     "senderLastName" : "initiator.lastName?str",
     "documentId" : "?id",
-    "title" : "title"
+    "title" : "title",
+    "description" : "description"
   },
   "multiTemplateConfig" : [ ]
 }
