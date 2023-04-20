@@ -52,7 +52,7 @@
                   "ru": "На доработку",
                   "en": "Rework"
                 },
-                "key": "outcome_Rework",
+                "key": "outcome_rework",
                 "state": "",
                 "block": true,
                 "refreshOn": [],
@@ -83,7 +83,7 @@
                   "ru": "Принято",
                   "en": "Approve"
                 },
-                "key": "outcome_Approve",
+                "key": "outcome_approve",
                 "state": "",
                 "theme": "primary",
                 "block": true,

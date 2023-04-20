@@ -41,6 +41,12 @@ model:
         en: Verifier
       attributes:
         - verifier
+    - id: administrator
+        name:
+          ru: Администратор
+          en: Administrator
+        assignees:
+          - GROUP_ECOS_ADMINISTRATORS
   statuses:
     - id: created
       name:

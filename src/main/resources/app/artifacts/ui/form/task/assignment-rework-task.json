@@ -52,7 +52,7 @@
                   "en": "Complete",
                   "ru": "Выполнить задачу повторно"
                 },
-                "key": "outcome_Complete",
+                "key": "outcome_rework-complete",
                 "state": "",
                 "labelPosition": "",
                 "theme": "primary",
