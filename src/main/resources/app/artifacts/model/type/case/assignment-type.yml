@@ -42,11 +42,11 @@ model:
       attributes:
         - verifier
     - id: administrator
-        name:
-          ru: Администратор
-          en: Administrator
-        assignees:
-          - GROUP_ECOS_ADMINISTRATORS
+      name:
+        ru: Администратор
+        en: Administrator
+      assignees:
+        - GROUP_ECOS_ADMINISTRATORS
   statuses:
     - id: created
       name:
@@ -97,6 +97,7 @@ model:
       name:
         en: Verifier
         ru: Проверяющий
+      type: AUTHORITY
     - id: initiator
       name:
         ru: Инициатор

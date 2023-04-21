@@ -2,18 +2,15 @@
   "id" : "assignment-initiator-complete-notification",
   "name" : "Assignment Initiator Complete Notification",
   "notificationTitle" : {
-    "en" : "Assignment complete, ${title}",
-    "ru" : "Поручение выполнено, ${title}"
+    "en" : "Assignment complete: ${title}",
+    "ru" : "Поручение выполнено: ${title}"
   },
   "tags" : [ ],
   "model" : {
-    "date" : "$now?str",
-    "sender" : "initiator?id",
-    "senderFirstName" : "initiator.firstName?str",
-    "senderLastName" : "initiator.lastName?str",
-    "documentId" : "?id",
+    "docRef" : ".id",
     "title" : "title",
-    "description" : "description"
+    "description" : "description",
+    "stat" : "_status._disp.ru"
   },
   "multiTemplateConfig" : [ ]
 }

@@ -7,13 +7,11 @@
   },
   "tags" : [ ],
   "model" : {
-    "date" : "$now?str",
-    "sender" : "initiator?id",
-    "senderFirstName" : "initiator.firstName?str",
-    "senderLastName" : "initiator.lastName?str",
-    "documentId" : "?id",
+    "initiator" : "initiator?disp",
     "title" : "title",
-    "description" : "description"
+    "description" : "description",
+    "docRef" : ".id",
+    "stat" : "_status._disp.ru"
   },
   "multiTemplateConfig" : [ ]
 }

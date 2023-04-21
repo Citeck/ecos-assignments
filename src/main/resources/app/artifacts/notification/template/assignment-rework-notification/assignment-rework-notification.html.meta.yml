@@ -2,14 +2,16 @@
   "id" : "assignment-rework-notification",
   "name" : "Assignment Rework Notification",
   "notificationTitle" : {
-    "ru" : "Новая задача: Решение о повторном исполнении, ${title}",
-    "en" : "New task: Decision of reworking, ${title}"
+    "ru" : "Решение о повторном исполнении поручения: ${title}",
+    "en" : "Decision of assignment reworking: ${title}"
   },
   "tags" : [ ],
   "model" : {
-    "date" : "$now?str",
-    "documentId" : "?id",
-    "title" : "title"
+    "verifier" : "verifier?disp",
+    "title" : "title",
+    "docRef" : ".id",
+    "stat" : "_status._disp.ru",
+    "comment" : "$process.comment"
   },
   "multiTemplateConfig" : [ ]
 }

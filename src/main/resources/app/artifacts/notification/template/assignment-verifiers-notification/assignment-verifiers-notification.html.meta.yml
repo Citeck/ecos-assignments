@@ -2,17 +2,15 @@
   "id" : "assignment-verifiers-notification",
   "name" : "Assignment Verifiers Notification",
   "notificationTitle" : {
-    "en" : "New task: Performance inspectation, ${title}",
-    "ru" : "Новая задача: Проверка исполнения, ${title}"
+    "en" : "Assignment performance verification: ${title}",
+    "ru" : "Проверка исполнения поручения: ${title}"
   },
   "tags" : [ ],
   "model" : {
-    "date" : "$now?str",
-    "sender" : "initiator?id",
-    "senderFirstName" : "initiator.firstName?str",
-    "senderLastName" : "initiator.lastName?str",
-    "documentId" : "?id",
-    "title" : "title"
+    "docRef" : ".id",
+    "title" : "title",
+    "comment" : "$process.comment",
+    "stat" : "_status._disp.ru"
   },
   "multiTemplateConfig" : [ ]
 }
