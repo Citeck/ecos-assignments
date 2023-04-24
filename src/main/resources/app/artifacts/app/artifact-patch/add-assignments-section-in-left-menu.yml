@@ -33,8 +33,7 @@ config:
             "hidden": false,
             "type": "JOURNAL",
             "config": {
-              "recordRef": "uiserv/journal@assignments-journal",
-              "displayCount": true
+              "recordRef": "uiserv/journal@assignments-journal"
             },
             "action": {
               "type": "",
