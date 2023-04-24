@@ -364,6 +364,7 @@
                         "refreshOn": [
                           "caseType"
                         ],
+                        "calculateValue": "const { assocRecordRef = \"\" } = data || \"\";\nvalue = assocRecordRef;",
                         "allowCalculateOverride": true,
                         "optionalWhenDisabled": false,
                         "type": "selectJournal",
