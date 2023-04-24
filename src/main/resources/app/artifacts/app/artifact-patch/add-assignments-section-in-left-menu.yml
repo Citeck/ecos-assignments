@@ -26,8 +26,8 @@ config:
           {
             "id": "assignments",
             "label": {
-              "en": "Мои поручения",
-              "ru": "My assignments"
+              "ru": "Поручения",
+              "en": "Assignments"
             },
             "icon": "",
             "hidden": false,
