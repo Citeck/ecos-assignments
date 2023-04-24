@@ -1,0 +1,11 @@
+---
+id: create-assignment
+name:
+  ru: Создать поручение
+  en: Create assignment
+icon: icon-plus
+type: create
+config:
+  typeRef: emodel/type@assignment-type
+  attributes:
+    assocRecordRef: '${recordRef}'

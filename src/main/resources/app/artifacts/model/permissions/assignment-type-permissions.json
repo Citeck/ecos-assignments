@@ -1,0 +1,33 @@
+{
+  "id": "1d57f409-7a4f-4120-b794-58aad3592b95",
+  "typeRef": "emodel/type@assignment-type",
+  "permissions": {
+    "matrix": {
+      "initiator": {
+        "created": "READ",
+        "verification": "READ",
+        "rework": "READ",
+        "complete": "READ"
+      },
+      "performer": {
+        "created": "READ",
+        "verification": "READ",
+        "rework": "READ",
+        "complete": "READ"
+      },
+      "verifier": {
+        "created": "READ",
+        "verification": "READ",
+        "rework": "READ",
+        "complete": "READ"
+      },
+      "administrator": {
+        "created": "WRITE",
+        "verification": "WRITE",
+        "rework": "WRITE",
+        "complete": "WRITE"
+      }
+    }
+  },
+  "attributes": {}
+}

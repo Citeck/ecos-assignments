@@ -1,8 +1,9 @@
 {
-  "id": "task-case-rework-task",
-  "formKey": "task-case-rework-task",
+  "id": "assignment-rework-task",
+  "formKey": "assignment-rework-task",
   "title": {
-    "en": "Доработка задачи"
+    "ru": "Доработка поручения",
+    "en": "Assignment reworking"
   },
   "description": {},
   "customModule": "",
@@ -51,7 +52,7 @@
                   "en": "Complete",
                   "ru": "Выполнить задачу повторно"
                 },
-                "key": "outcome_Complete",
+                "key": "outcome_rework-complete",
                 "state": "",
                 "labelPosition": "",
                 "theme": "primary",
@@ -110,7 +111,7 @@
         "key": "columns2"
       }
     ],
-    "formId": "task-case-rework-task"
+    "formId": "assignment-rework-task"
   },
   "attributes": {},
   "notExists": false
