@@ -10,8 +10,7 @@
     "initiator" : "initiator?disp",
     "title" : "title",
     "description" : "description",
-    "docRef" : ".id",
-    "stat" : "_status._disp.ru"
+    "docRef" : ".id"
   },
   "multiTemplateConfig" : [ ]
 }

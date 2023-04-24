@@ -9,8 +9,7 @@
   "model" : {
     "docRef" : ".id",
     "title" : "title",
-    "description" : "description",
-    "stat" : "_status._disp.ru"
+    "description" : "description"
   },
   "multiTemplateConfig" : [ ]
 }

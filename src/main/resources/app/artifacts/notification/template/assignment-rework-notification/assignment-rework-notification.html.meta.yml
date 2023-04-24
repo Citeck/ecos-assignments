@@ -10,7 +10,6 @@
     "verifier" : "verifier?disp",
     "title" : "title",
     "docRef" : ".id",
-    "stat" : "_status._disp.ru",
     "comment" : "$process.comment"
   },
   "multiTemplateConfig" : [ ]

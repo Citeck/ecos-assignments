@@ -1,4 +1,3 @@
 <p>Добрый день!</p>
-<p>${verifier} отправил Вам на доработку поручение: <a href="${link.getRecordLink(docRef)}">${title}</a>.</p>
-<p><strong>Комментарий:</strong> ${comment}</p>
-<p>Текущий статус поручения: <i>${stat}</i>.</p>
+<p>${verifier!""} отправил Вам на доработку поручение: <a href="${link.getRecordLink(docRef)}">${title}</a>.</p>
+<p><strong>Комментарий:</strong> ${comment!"-"}</p>

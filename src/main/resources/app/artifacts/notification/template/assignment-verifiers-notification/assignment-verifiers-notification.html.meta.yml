@@ -9,8 +9,7 @@
   "model" : {
     "docRef" : ".id",
     "title" : "title",
-    "comment" : "$process.comment",
-    "stat" : "_status._disp.ru"
+    "comment" : "$process.comment"
   },
   "multiTemplateConfig" : [ ]
 }
