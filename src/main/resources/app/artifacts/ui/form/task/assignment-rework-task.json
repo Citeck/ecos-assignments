@@ -1,8 +1,9 @@
 {
-  "id": "task-case-verify-task",
-  "formKey": "task-case-verify-task",
+  "id": "assignment-rework-task",
+  "formKey": "assignment-rework-task",
   "title": {
-    "en": "Проверка задачи"
+    "ru": "Доработка поручения",
+    "en": "Assignment reworking"
   },
   "description": {},
   "customModule": "",
@@ -17,10 +18,10 @@
     "components": [
       {
         "label": {
-          "en": "Performer comment",
-          "ru": "Комментарий исполнителя"
+          "ru": "Комментарий проверяющего",
+          "en": "Verifier comment"
         },
-        "key": "performer_comment",
+        "key": "verifier_comment",
         "disabled": true,
         "defaultValue": "",
         "refreshOn": [],
@@ -30,8 +31,8 @@
       },
       {
         "label": {
-          "en": "Verifier comment",
-          "ru": "Комментарий проверяющего"
+          "ru": "Результат выполнения поручения",
+          "en": "Result"
         },
         "key": "comment",
         "defaultValue": "",
@@ -48,12 +49,15 @@
             "components": [
               {
                 "label": {
-                  "ru": "На доработку",
-                  "en": "Rework"
+                  "en": "Complete",
+                  "ru": "Выполнить поручение повторно"
                 },
-                "key": "outcome_Rework",
+                "key": "outcome_rework-complete",
                 "state": "",
+                "labelPosition": "",
+                "theme": "primary",
                 "block": true,
+                "disableOnInvalid": true,
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
                 "type": "button",
@@ -76,26 +80,7 @@
             "input": false
           },
           {
-            "components": [
-              {
-                "label": {
-                  "ru": "Принято",
-                  "en": "Approve"
-                },
-                "key": "outcome_Approve",
-                "state": "",
-                "theme": "primary",
-                "block": true,
-                "disableOnInvalid": true,
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
-                "type": "button",
-                "input": true,
-                "headers": [
-                  {}
-                ]
-              }
-            ],
+            "components": [],
             "conditional": {
               "show": null,
               "when": null
@@ -126,7 +111,7 @@
         "key": "columns2"
       }
     ],
-    "formId": "task-case-verify-task"
+    "formId": "assignment-rework-task"
   },
   "attributes": {},
   "notExists": false

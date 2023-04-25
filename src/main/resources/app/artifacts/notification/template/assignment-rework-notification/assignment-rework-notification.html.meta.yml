@@ -1,0 +1,16 @@
+{
+  "id" : "assignment-rework-notification",
+  "name" : "Assignment Rework Notification",
+  "notificationTitle" : {
+    "ru" : "Решение о повторном исполнении поручения: ${title}",
+    "en" : "Decision of assignment reworking: ${title}"
+  },
+  "tags" : [ ],
+  "model" : {
+    "verifier" : "verifier?disp",
+    "title" : "title",
+    "docRef" : ".id",
+    "comment" : "$process.comment"
+  },
+  "multiTemplateConfig" : [ ]
+}

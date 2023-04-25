@@ -1,8 +1,9 @@
 {
-  "id": "task-case-perform-task",
-  "formKey": "task-case-perform-task",
+  "id": "assignment-perform-task",
+  "formKey": "assignment-perform-task",
   "title": {
-    "en": "Выполнение задачи"
+    "ru": "Выполнение поручения",
+    "en": "Assignment performing"
   },
   "description": {},
   "customModule": "",
@@ -96,7 +97,7 @@
         "key": "columns2"
       }
     ],
-    "formId": "task-case-perform-task"
+    "formId": "assignment-perform-task"
   },
   "attributes": {},
   "notExists": false

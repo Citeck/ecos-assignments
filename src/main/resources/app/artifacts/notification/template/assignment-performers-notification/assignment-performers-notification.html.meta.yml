@@ -1,0 +1,16 @@
+{
+  "id" : "assignment-performers-notification",
+  "name" : "Assignment Performers Notification",
+  "notificationTitle" : {
+    "ru" : "Новое поручение: ${title}",
+    "en" : "New assignment: ${title}"
+  },
+  "tags" : [ ],
+  "model" : {
+    "initiator" : "initiator?disp",
+    "title" : "title",
+    "description" : "description",
+    "docRef" : ".id"
+  },
+  "multiTemplateConfig" : [ ]
+}

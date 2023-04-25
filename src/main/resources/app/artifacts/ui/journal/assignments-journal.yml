@@ -1,22 +1,20 @@
 ---
-id: ecos-tasks
+id: assignments-journal
 name:
-  ru: Задача
-  en: Task
-typeRef: emodel/type@tasks-cat-doctype
+  ru: Поручения
+  en: Assignments
+typeRef: emodel/type@assignment-type
 actions:
-  - uiserv/action@download-zip
   - uiserv/action@edit
   - uiserv/action@view-dashboard
   - uiserv/action@view-dashboard-in-background
   - uiserv/action@delete
 columns:
-  - id: created
+  - id: _created
     name:
       ru: Дата создания
       en: Created
     type: DATE
-    attribute: _created
   - id: _disp
     name:
       ru: Имя
@@ -26,11 +24,10 @@ columns:
       ru: Название
       en: Title
     type: TEXT
-  - id: documentStatus
+  - id: _status
     name:
       ru: Статус
       en: Status
-    attribute: _status
   - id: initiator
     name:
       ru: Инициатор

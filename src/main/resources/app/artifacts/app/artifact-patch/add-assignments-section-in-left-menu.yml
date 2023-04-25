@@ -1,0 +1,47 @@
+id: add-assignments-section-in-left-menu
+name: {ru: Добавить раздел "Поручения" в левое меню, en: Add section "Assignments" in left menu }
+
+target: 'ui/menu$default-menu-v1'
+
+type: json
+config:
+  operations:
+    - op: add
+      path: '$..[?(@.id == "sections")].items'
+      value: {
+        "id": "assignments-section",
+        "label": {
+          "ru": "Поручения",
+          "en": "Assignments"
+        },
+        "icon": "ui/icon@i-leftmenu-subordinate-tasks",
+        "hidden": false,
+        "type": "SECTION",
+        "config": {},
+        "action": {
+          "type": "",
+          "config": {}
+        },
+        "items": [
+          {
+            "id": "assignments",
+            "label": {
+              "ru": "Поручения",
+              "en": "Assignments"
+            },
+            "icon": "",
+            "hidden": false,
+            "type": "JOURNAL",
+            "config": {
+              "recordRef": "uiserv/journal@assignments-journal"
+            },
+            "action": {
+              "type": "",
+              "config": {}
+            },
+            "items": [],
+            "allowedFor": []
+          }
+        ],
+        "allowedFor": []
+      }
