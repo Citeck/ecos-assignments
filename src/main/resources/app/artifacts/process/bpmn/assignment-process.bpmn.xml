@@ -84,20 +84,18 @@
             <bpmn:outgoing >Flow_1tl5owh</bpmn:outgoing>
         </bpmn:userTask>
         <bpmn:sequenceFlow sourceRef="Activity_06wdtly" targetRef="Activity_0h91nry" name="" id="Flow_0lbpamf" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:scriptTask scriptFormat="javascript" name="Очистка комментариев" id="Activity_06wdtly" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Очистка комментариев&quot;,&quot;en&quot;:&quot;Clear comments&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:script=" var comment = execution.getVariable('comment');&#10; execution.setVariable('performer_comment', comment);&#10; execution.removeVariable('comment');">
+        <bpmn:scriptTask scriptFormat="javascript" name="Очистка комментариев" id="Activity_06wdtly" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Очистка комментариев&quot;,&quot;en&quot;:&quot;Clear comments&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:script="var lastTaskComment = execution.getVariable('lastTaskComment'); &#10;execution.setVariable('performer_comment', lastTaskComment);">
             <bpmn:incoming >Flow_0gwxk8f</bpmn:incoming>
             <bpmn:outgoing >Flow_0lbpamf</bpmn:outgoing>
-            <bpmn:script> var comment = execution.getVariable('comment');
-                execution.setVariable('performer_comment', comment);
-                execution.removeVariable('comment');</bpmn:script>
+            <bpmn:script>var lastTaskComment = execution.getVariable('lastTaskComment');
+                execution.setVariable('performer_comment', lastTaskComment);</bpmn:script>
         </bpmn:scriptTask>
         <bpmn:sequenceFlow sourceRef="Activity_0lf7uhe" targetRef="Activity_04qk3h7" name="" id="Flow_14r959w" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
-        <bpmn:scriptTask scriptFormat="javascript" name="Очистка комментариев" id="Activity_0lf7uhe" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Очистка комментариев&quot;,&quot;en&quot;:&quot;Clear comments&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:script=" var comment = execution.getVariable('comment');&#10; execution.setVariable('verifier_comment', comment);&#10; execution.removeVariable('comment');">
+        <bpmn:scriptTask scriptFormat="javascript" name="Очистка комментариев" id="Activity_0lf7uhe" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Очистка комментариев&quot;,&quot;en&quot;:&quot;Clear comments&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:script="var lastTaskComment = execution.getVariable('lastTaskComment');&#10;execution.setVariable('verifier_comment', lastTaskComment);">
             <bpmn:incoming >Flow_1lix1l7</bpmn:incoming>
             <bpmn:outgoing >Flow_14r959w</bpmn:outgoing>
-            <bpmn:script> var comment = execution.getVariable('comment');
-                execution.setVariable('verifier_comment', comment);
-                execution.removeVariable('comment');</bpmn:script>
+            <bpmn:script>var lastTaskComment = execution.getVariable('lastTaskComment');
+                execution.setVariable('verifier_comment', lastTaskComment);</bpmn:script>
         </bpmn:scriptTask>
         <bpmn:sequenceFlow sourceRef="Activity_0xpwqi6" targetRef="Activity_0ul8bwy" name="" id="Flow_1elwsjp" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
         <bpmn:scriptTask scriptFormat="javascript" name="Установка переменных процесса" id="Activity_0xpwqi6" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Установка переменных процесса&quot;,&quot;en&quot;:&quot;Define process variables&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:script="var dueDate = document.load(&quot;dueDate&quot;);&#10;var priority = document.load(&quot;priority&quot;);&#10;execution.setVariable('dueDate', dueDate);&#10;execution.setVariable('priority', priority);">
