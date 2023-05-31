@@ -9,7 +9,7 @@
   "customModule": "",
   "typeRef": "",
   "width": "",
-  "system": false,
+  "system": true,
   "i18n": {
     "ru": {},
     "en": {}

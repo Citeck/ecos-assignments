@@ -9,7 +9,7 @@
   "customModule": "",
   "typeRef": "",
   "width": "",
-  "system": false,
+  "system": true,
   "i18n": {
     "ru": {},
     "en": {}
@@ -18,21 +18,8 @@
     "components": [
       {
         "label": {
-          "en": "Performer comment",
-          "ru": "Комментарий исполнителя"
-        },
-        "key": "comment",
-        "disabled": true,
-        "defaultValue": "",
-        "refreshOn": [],
-        "optionalWhenDisabled": false,
-        "type": "textarea",
-        "input": true
-      },
-      {
-        "label": {
-          "en": "Verifier comment",
-          "ru": "Комментарий проверяющего"
+          "ru": "Комментарий",
+          "en": "Comment"
         },
         "key": "comment",
         "defaultValue": "",

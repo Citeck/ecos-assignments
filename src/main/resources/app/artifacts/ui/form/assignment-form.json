@@ -9,7 +9,7 @@
   "customModule": "",
   "typeRef": "",
   "width": "",
-  "system": false,
+  "system": true,
   "i18n": {
     "en": {
       "required": "{{field}} is required",
