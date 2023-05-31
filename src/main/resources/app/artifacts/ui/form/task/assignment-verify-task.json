@@ -21,7 +21,7 @@
           "en": "Performer comment",
           "ru": "Комментарий исполнителя"
         },
-        "key": "lastTaskComment",
+        "key": "comment",
         "disabled": true,
         "defaultValue": "",
         "refreshOn": [],

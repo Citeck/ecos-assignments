@@ -21,7 +21,7 @@
           "ru": "Комментарий проверяющего",
           "en": "Verifier comment"
         },
-        "key": "lastTaskComment",
+        "key": "comment",
         "disabled": true,
         "defaultValue": "",
         "refreshOn": [],
