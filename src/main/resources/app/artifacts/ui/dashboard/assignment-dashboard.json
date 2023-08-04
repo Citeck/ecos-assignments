@@ -178,18 +178,21 @@
               "elementsDisplayCondition": {},
               "types": [
                 {
-                  "formId": null,
+                  "type": "emodel/type@scan-document",
                   "multiple": false,
-                  "type": "emodel/type@category-document-type/kind-d-scan-documents",
-                  "mandatory": false
+                  "mandatory": false,
+                  "canUpload": true,
+                  "journalId": ""
                 },
                 {
-                  "formId": null,
+                  "type": "emodel/type@counterparty-document",
                   "multiple": false,
-                  "type": "emodel/type@category-document-type/kind-d-counterparty-documents",
-                  "mandatory": false
+                  "mandatory": false,
+                  "canUpload": true,
+                  "journalId": ""
                 }
-              ]
+              ],
+              "isLoadChecklist": true
             }
           },
           "description": {
