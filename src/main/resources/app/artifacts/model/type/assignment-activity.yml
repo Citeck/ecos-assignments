@@ -1,0 +1,45 @@
+---
+id: assignment-activity
+name:
+  ru: Поручение
+  en: Assignment
+
+storageType: DEFAULT
+parentRef: emodel/type@immediate-activity
+
+inheritActions: true
+model:
+  attributes:
+    - id: title
+      name:
+        ru: Название
+        en: Title
+    - id: dueDate
+      name:
+        ru: Срок
+        en: Deadline
+      type: DATETIME
+    - id: priority
+      name:
+        ru: Приоритет
+        en: Priority
+      type: NUMBER
+    - id: initiator
+      name:
+        ru: Инициатор
+        en: Initiator
+      type: AUTHORITY
+    - id: performer
+      name:
+        ru: Исполнитель
+        en: Performer
+      type: AUTHORITY
+    - id: assignment
+      name:
+        ru: Поручение
+        en: Assignment
+      type: ASSOC
+      config:
+        typeRef: emodel/type@assignment-type
+        child: true
+
