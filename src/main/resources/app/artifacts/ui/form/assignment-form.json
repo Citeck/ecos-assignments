@@ -73,6 +73,14 @@
                 "validate": {
                   "required": true
                 },
+                "editor": "quill",
+                "wysiwyg": {
+                  "theme": "snow",
+                  "placeholder": "",
+                  "modules": {
+                    "toolbar": false
+                  }
+                },
                 "defaultValue": "",
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
