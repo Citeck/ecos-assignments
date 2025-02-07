@@ -1,0 +1,17 @@
+{
+  "id" : "assignment-to-verification-notification",
+  "name" : "Поручение. Уведомление на проверку",
+  "notificationTitle" : {
+    "ru" : "Необходимо проверить поручение: ${title}",
+    "en" : "Assignment needs verification: ${title}"
+  },
+  "tags" : [ ],
+  "model" : {
+    "title" : "title",
+    "performer": "performer?disp",
+    "priority": "priority?num",
+    "dueDate": "dueDate",
+    "docRef" : ".id"
+  },
+  "multiTemplateConfig" : [ ]
+}

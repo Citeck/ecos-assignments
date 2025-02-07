@@ -1,6 +1,6 @@
 {
-  "id" : "assignment-performers-notification",
-  "name" : "Assignment Performers Notification",
+  "id" : "assignment-new-notification",
+  "name" : "Поручение. Уведомление исполнителю о создании",
   "notificationTitle" : {
     "ru" : "Новое поручение: ${title}",
     "en" : "New assignment: ${title}"
@@ -9,6 +9,8 @@
   "model" : {
     "initiator" : "initiator?disp",
     "title" : "title",
+    "priority": "priority?num",
+    "dueDate": "dueDate",
     "description" : "description",
     "docRef" : ".id"
   },

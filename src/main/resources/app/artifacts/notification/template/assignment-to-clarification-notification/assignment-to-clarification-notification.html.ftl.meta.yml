@@ -1,0 +1,17 @@
+{
+  "id" : "assignment-to-clarification-notification",
+  "name" : "Поручение. Уведомление о уточнении",
+  "notificationTitle" : {
+    "ru" : "Уточнение по поручению: ${title}",
+    "en" : "Clarification on assignment: ${title}"
+  },
+  "tags" : [ ],
+  "model" : {
+    "title" : "title",
+    "comment": "$process.comment",
+    "priority": "priority?num",
+    "dueDate": "dueDate",
+    "docRef" : ".id"
+  },
+  "multiTemplateConfig" : [ ]
+}

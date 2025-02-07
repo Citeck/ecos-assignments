@@ -1,0 +1,17 @@
+{
+  "id" : "assignment-done-notification",
+  "name" : "Поручение. Выполнено",
+  "notificationTitle" : {
+    "ru" : "Поручение выполнено: ${title}",
+    "en" : "Assignment completed: ${title}"
+  },
+  "tags" : [ ],
+  "model" : {
+    "title" : "title",
+    "performer": "performer?disp",
+    "priority": "priority?num",
+    "dueDate": "dueDate",
+    "docRef" : ".id"
+  },
+  "multiTemplateConfig" : [ ]
+}

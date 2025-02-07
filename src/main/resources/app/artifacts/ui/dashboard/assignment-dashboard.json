@@ -1,10 +1,12 @@
 {
   "id": "91115555-d888-4877-998a-30afc24616fd",
+  "name": {},
   "typeRef": "emodel/type@assignment-type",
   "appliedToRef": "",
-  "authority": null,
+  "authority": "",
   "scope": "",
   "priority": 0,
+  "workspace": "",
   "config": {
     "version": "v2",
     "v2": {
@@ -178,15 +180,8 @@
               "elementsDisplayCondition": {},
               "types": [
                 {
-                  "type": "emodel/type@scan-document",
-                  "multiple": false,
-                  "mandatory": false,
-                  "canUpload": true,
-                  "journalId": ""
-                },
-                {
-                  "type": "emodel/type@counterparty-document",
-                  "multiple": false,
+                  "type": "emodel/type@document",
+                  "multiple": true,
                   "mandatory": false,
                   "canUpload": true,
                   "journalId": ""

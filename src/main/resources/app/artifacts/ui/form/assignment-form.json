@@ -73,18 +73,35 @@
                 "validate": {
                   "required": true
                 },
-                "editor": "quill",
+                "editor": "ckeditor",
                 "wysiwyg": {
                   "theme": "snow",
                   "placeholder": "",
                   "modules": {
                     "toolbar": false
-                  }
+                  },
+                  "rows": 7,
+                  "base64Upload": true
                 },
                 "defaultValue": "",
                 "refreshOn": [],
                 "optionalWhenDisabled": false,
+                "rows": 7,
                 "type": "textarea",
+                "input": true
+              },
+              {
+                "label": {
+                  "ru": "Инициатор",
+                  "en": "Initiator"
+                },
+                "key": "initiator",
+                "disabled": true,
+                "currentUserByDefault": true,
+                "defaultValue": "",
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "selectOrgstruct",
                 "input": true
               },
               {
@@ -138,6 +155,9 @@
                           "en": "Priority"
                         },
                         "key": "priority",
+                        "validate": {
+                          "required": true
+                        },
                         "clearOnHide": false,
                         "dataSrc": "values",
                         "data": {
@@ -176,20 +196,6 @@
                 "key": "columns",
                 "type": "columns",
                 "input": false
-              },
-              {
-                "label": {
-                  "ru": "Инициатор",
-                  "en": "Initiator"
-                },
-                "key": "initiator",
-                "disabled": true,
-                "currentUserByDefault": true,
-                "defaultValue": "",
-                "refreshOn": [],
-                "optionalWhenDisabled": false,
-                "type": "selectOrgstruct",
-                "input": true
               }
             ]
           },
@@ -204,6 +210,7 @@
             },
             "refreshOn": [],
             "optionalWhenDisabled": false,
+            "customConditional": "var shouldShow = true;\n\nlet currentWorkspace = Citeck.Navigator.getWorkspaceId();\nif (currentWorkspace) {\n  shouldShow = !currentWorkspace.startsWith(\"user$\");\n}\n\nshow = shouldShow;",
             "type": "panel",
             "input": false,
             "components": [
@@ -217,11 +224,6 @@
                           "en": "Performer"
                         },
                         "key": "performer",
-                        "multiple": true,
-                        "validate": {
-                          "required": true
-                        },
-                        "reorder": false,
                         "clearOnHide": false,
                         "defaultValue": [],
                         "refreshOn": [],
@@ -250,35 +252,15 @@
                     "components": [
                       {
                         "label": {
-                          "ru": "Проверять результаты",
-                          "en": "Verify"
-                        },
-                        "key": "verify",
-                        "refreshOn": [],
-                        "optionalWhenDisabled": false,
-                        "type": "checkbox",
-                        "input": true
-                      },
-                      {
-                        "label": {
                           "ru": "Проверяющий",
                           "en": "Verifier"
                         },
                         "key": "verifier",
-                        "validate": {
-                          "required": true
-                        },
                         "clearOnHide": false,
                         "allowedAuthorityType": "USER",
-                        "currentUserByDefault": true,
                         "defaultValue": "",
                         "refreshOn": [],
                         "optionalWhenDisabled": false,
-                        "conditional": {
-                          "show": "true",
-                          "when": "verify",
-                          "eq": "true"
-                        },
                         "type": "selectOrgstruct",
                         "input": true
                       }
@@ -376,13 +358,7 @@
                         "allowCalculateOverride": true,
                         "optionalWhenDisabled": false,
                         "type": "selectJournal",
-                        "input": true,
-                        "source": {
-                          "custom": {
-                            "columns": []
-                          },
-                          "type": "journal"
-                        }
+                        "input": true
                       }
                     ]
                   }
@@ -498,8 +474,10 @@
             "attributes": {
               "value": "journalRef?str",
               "label": "journalRef"
-            }
-          }
+            },
+            "isSingle": false
+          },
+          "forceLoad": false
         },
         "update": {
           "type": "once"

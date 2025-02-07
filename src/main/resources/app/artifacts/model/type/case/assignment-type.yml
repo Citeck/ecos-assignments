@@ -10,8 +10,8 @@ journalRef: uiserv/journal@assignments-journal
 inheritForm: false
 inheritActions: false
 dispNameTemplate:
-  ru: "Поручение: ${title}"
-  en: "Assignment: ${title}"
+  ru: 'Поручение: ${title}'
+  en: 'Assignment: ${title}'
 associations:
   - id: assoc:associatedWith
     name:
@@ -50,20 +50,28 @@ model:
   statuses:
     - id: created
       name:
-        ru: Создано
-        en: Created
+        ru: Новое
+        en: New
     - id: verification
       name:
         ru: Проверка
         en: Verification
     - id: rework
       name:
-        ru: Доработка
-        en: Rework
+        ru: Доработка (Устарело)
+        en: Rework (Deprecated)
     - id: complete
       name:
         ru: Выполнено
         en: Complete
+    - id: clarification
+      name:
+        ru: Уточнение
+        en: Clarification
+    - id: in-progress
+      name:
+        ru: В работе
+        en: In progress
   attributes:
     - id: title
       name:
@@ -88,11 +96,6 @@ model:
         ru: Исполнитель
         en: Performer
       type: AUTHORITY
-    - id: verify
-      name:
-        ru: Проверять результаты
-        en: Verify
-      type: BOOLEAN
     - id: verifier
       name:
         en: Verifier
@@ -103,3 +106,6 @@ model:
         ru: Инициатор
         en: Initiator
       type: AUTHORITY
+aspects:
+  - ref: emodel/aspect@task-comments-broadcastable
+    inheritConfig: false

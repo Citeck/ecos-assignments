@@ -4,30 +4,298 @@
   "permissions": {
     "matrix": {
       "initiator": {
-        "created": "READ",
-        "verification": "READ",
+        "created": "WRITE",
+        "verification": "WRITE",
         "rework": "READ",
-        "complete": "READ"
+        "complete": "WRITE",
+        "clarification": "WRITE",
+        "in-progress": "WRITE"
       },
       "performer": {
-        "created": "READ",
-        "verification": "READ",
+        "created": "WRITE",
+        "verification": "WRITE",
         "rework": "READ",
-        "complete": "READ"
+        "complete": "READ",
+        "clarification": "WRITE",
+        "in-progress": "WRITE"
       },
       "verifier": {
         "created": "READ",
-        "verification": "READ",
+        "verification": "WRITE",
         "rework": "READ",
-        "complete": "READ"
+        "complete": "READ",
+        "clarification": "READ",
+        "in-progress": "READ"
       },
       "administrator": {
         "created": "WRITE",
         "verification": "WRITE",
         "rework": "WRITE",
-        "complete": "WRITE"
+        "complete": "WRITE",
+        "clarification": "WRITE",
+        "in-progress": "WRITE"
       }
     }
   },
-  "attributes": {}
+  "attributes": {
+    "title": {
+      "matrix": {
+        "initiator": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        },
+        "performer": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        },
+        "verifier": {
+          "created": "READ",
+          "verification": "READ",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "READ",
+          "in-progress": "READ"
+        },
+        "administrator": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "WRITE",
+          "complete": "WRITE",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        }
+      },
+      "rules": []
+    },
+    "description": {
+      "matrix": {
+        "initiator": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        },
+        "performer": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        },
+        "verifier": {
+          "created": "READ",
+          "verification": "READ",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "READ",
+          "in-progress": "READ"
+        },
+        "administrator": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "WRITE",
+          "complete": "WRITE",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        }
+      },
+      "rules": []
+    },
+    "dueDate": {
+      "matrix": {
+        "initiator": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        },
+        "performer": {
+          "created": "READ",
+          "verification": "READ",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "READ",
+          "in-progress": "READ"
+        },
+        "verifier": {
+          "created": "READ",
+          "verification": "READ",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "READ",
+          "in-progress": "READ"
+        },
+        "administrator": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "WRITE",
+          "complete": "WRITE",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        }
+      },
+      "rules": []
+    },
+    "priority": {
+      "matrix": {
+        "initiator": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        },
+        "performer": {
+          "created": "READ",
+          "verification": "READ",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "READ",
+          "in-progress": "READ"
+        },
+        "verifier": {
+          "created": "READ",
+          "verification": "READ",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "READ",
+          "in-progress": "READ"
+        },
+        "administrator": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "WRITE",
+          "complete": "WRITE",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        }
+      },
+      "rules": []
+    },
+    "performer": {
+      "matrix": {
+        "initiator": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        },
+        "performer": {
+          "created": "READ",
+          "verification": "READ",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "READ",
+          "in-progress": "READ"
+        },
+        "verifier": {
+          "created": "READ",
+          "verification": "READ",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "READ",
+          "in-progress": "READ"
+        },
+        "administrator": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "WRITE",
+          "complete": "WRITE",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        }
+      },
+      "rules": []
+    },
+    "verifier": {
+      "matrix": {
+        "initiator": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        },
+        "performer": {
+          "created": "READ",
+          "verification": "READ",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "READ",
+          "in-progress": "READ"
+        },
+        "verifier": {
+          "created": "READ",
+          "verification": "READ",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "READ",
+          "in-progress": "READ"
+        },
+        "administrator": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "WRITE",
+          "complete": "WRITE",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        }
+      },
+      "rules": []
+    },
+    "initiator": {
+      "matrix": {
+        "initiator": {
+          "created": "READ",
+          "verification": "READ",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "READ",
+          "in-progress": "READ"
+        },
+        "performer": {
+          "created": "READ",
+          "verification": "READ",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "READ",
+          "in-progress": "READ"
+        },
+        "verifier": {
+          "created": "READ",
+          "verification": "READ",
+          "rework": "READ",
+          "complete": "READ",
+          "clarification": "READ",
+          "in-progress": "READ"
+        },
+        "administrator": {
+          "created": "WRITE",
+          "verification": "WRITE",
+          "rework": "WRITE",
+          "complete": "WRITE",
+          "clarification": "WRITE",
+          "in-progress": "WRITE"
+        }
+      },
+      "rules": []
+    }
+  }
 }
