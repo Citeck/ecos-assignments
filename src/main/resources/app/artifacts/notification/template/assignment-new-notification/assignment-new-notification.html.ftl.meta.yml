@@ -1,18 +1,18 @@
 {
-  "id" : "assignment-new-notification",
-  "name" : "Поручение. Уведомление исполнителю о создании",
-  "notificationTitle" : {
-    "ru" : "Новое поручение: ${title}",
-    "en" : "New assignment: ${title}"
+  "id": "assignment-new-notification",
+  "name": "Поручение. Уведомление исполнителю о создании",
+  "notificationTitle": {
+    "ru": "Новое поручение: ${title}",
+    "en": "New assignment: ${title}"
   },
-  "tags" : [ ],
-  "model" : {
-    "initiator" : "initiator?disp",
-    "title" : "title",
+  "tags": [],
+  "model": {
+    "initiator": "initiator?disp",
+    "title": "title",
     "priority": "priority?num",
     "dueDate": "dueDate",
-    "description" : "description",
-    "docRef" : ".id"
+    "description": "description",
+    "docRef": ".id"
   },
-  "multiTemplateConfig" : [ ]
+  "multiTemplateConfig": []
 }

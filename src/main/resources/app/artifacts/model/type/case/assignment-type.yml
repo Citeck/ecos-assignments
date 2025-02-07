@@ -8,7 +8,6 @@ parentRef: emodel/type@case
 formRef: uiserv/form@assignment-form
 journalRef: uiserv/journal@assignments-journal
 inheritForm: false
-inheritActions: false
 dispNameTemplate:
   ru: 'Поручение: ${title}'
   en: 'Assignment: ${title}'

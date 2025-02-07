@@ -24,8 +24,8 @@
         "verification": "WRITE",
         "rework": "READ",
         "complete": "READ",
-        "clarification": "READ",
-        "in-progress": "READ"
+        "clarification": "WRITE",
+        "in-progress": "WRITE"
       },
       "administrator": {
         "created": "WRITE",
@@ -35,7 +35,8 @@
         "clarification": "WRITE",
         "in-progress": "WRITE"
       }
-    }
+    },
+    "rules": []
   },
   "attributes": {
     "title": {

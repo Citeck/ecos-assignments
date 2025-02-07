@@ -1,5 +1,5 @@
 ---
-id: assignments-kanban
+id: assignments-kanban-personal
 typeRef: emodel/type@assignment-type
 journalRef: uiserv/journal@assignments-journal
 cardFormRef: uiserv/form@assignment-kanban-form
@@ -7,8 +7,8 @@ cardFieldsLabelLayout: LEFT
 readOnly: false
 disableTitle: false
 name:
-  ru: Канбан поручения
-  en: Assignments kanban
+  ru: Канбан поручения (персональные)
+  en: Assignments kanban (personal)
 actions: null
 columns:
   - id: created
@@ -17,22 +17,10 @@ columns:
       en: New
     hideOldItems: false
     hideItemsOlderThan: null
-  - id: clarification
-    name:
-      ru: Уточнение
-      en: Clarification
-    hideOldItems: false
-    hideItemsOlderThan: null
   - id: in-progress
     name:
       ru: В работе
       en: In progress
-    hideOldItems: false
-    hideItemsOlderThan: null
-  - id: verification
-    name:
-      ru: Проверка
-      en: Verification
     hideOldItems: false
     hideItemsOlderThan: null
   - id: complete

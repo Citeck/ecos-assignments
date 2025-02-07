@@ -45,22 +45,22 @@
                 <bpmn:incoming >Flow_0tbxxog</bpmn:incoming>
                 <bpmn:outgoing >Flow_1jy1u2w</bpmn:outgoing>
                 <bpmn:script>let allowedBefore = ['created', 'in-progress', 'clarification'];
-                    let beforeStat = event.get("before").asText();
+let beforeStat = event.get("before").asText();
 
-                    let verifierRole = document.load('_roles.assigneesOf.verifier[]?str');
+let verifierRole = document.load('_roles.assigneesOf.verifier[]?str');
 
-                    if (verifierRole.length === 0) {
-                    throw new Error("Проверяющий не задан");
-                    }
+if (verifierRole.length === 0) {
+  throw new Error("Проверяющий не задан");
+}
 
 
-                    if (beforeStat.length === 0) {
-                    throw new Error("Предыдущий статус не определен");
-                    }
+if (beforeStat.length === 0) {
+    throw new Error("Предыдущий статус не определен");
+}
 
-                    if (allowedBefore.indexOf(beforeStat) === -1) {
-                    throw new Error("Перевод в статус Проверка невозможен");
-                    }</bpmn:script>
+if (allowedBefore.indexOf(beforeStat) === -1) {
+    throw new Error("Перевод в статус Проверка невозможен");
+}</bpmn:script>
             </bpmn:scriptTask>
             <bpmn:sequenceFlow sourceRef="Activity_0uo5p03" targetRef="Activity_0v0ijl8" name="" id="Flow_1jy1u2w" ecos:name_ml="{}" ecos:conditionConfig="{&quot;fn&quot;:&quot;&quot;,&quot;expression&quot;:&quot;&quot;,&quot;outcome&quot;:&quot;&quot;}" ecos:conditionType="NONE"/>
             <bpmn:exclusiveGateway default="Flow_0o5op7z" name="" id="Gateway_13fww9o" ecos:documentation="{}" ecos:name_ml="{}">
@@ -108,16 +108,16 @@
                 <bpmn:incoming >Flow_152bbxn</bpmn:incoming>
                 <bpmn:outgoing >Flow_1ad84us</bpmn:outgoing>
                 <bpmn:script>let allowedBefore = ['created', 'verification', 'clarification'];
-                    let beforeStat = event.get("before").asText();
+let beforeStat = event.get("before").asText();
 
 
-                    if (beforeStat.length === 0) {
-                    throw new Error("Предыдущий статус не определен");
-                    }
+if (beforeStat.length === 0) {
+    throw new Error("Предыдущий статус не определен");
+}
 
-                    if (allowedBefore.indexOf(beforeStat) === -1) {
-                    throw new Error("Перевод в статус В Работе невозможен");
-                    }</bpmn:script>
+if (allowedBefore.indexOf(beforeStat) === -1) {
+    throw new Error("Перевод в статус В Работе невозможен");
+}</bpmn:script>
             </bpmn:scriptTask>
             <bpmn:userTask name="Выполнить поручение" id="Activity_1sqwoa5" ecos:manualRecipients="[]" ecos:outcomes="[{&quot;id&quot;:&quot;clarification&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;На уточнение&quot;,&quot;en&quot;:&quot;Clarification&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;WARNING&quot;}},{&quot;id&quot;:&quot;done&quot;,&quot;name&quot;:{&quot;ru&quot;:&quot;Выполнено&quot;,&quot;en&quot;:&quot;Done&quot;},&quot;config&quot;:{&quot;theme&quot;:&quot;PRIMARY&quot;}}]" ecos:laEnabled="false" ecos:name_ml="{&quot;ru&quot;:&quot;Выполнить поручение&quot;}" ecos:formRef="uiserv/form@assignment-task-base-form" ecos:manualRecipientsMode="false" ecos:documentation="{}" ecos:dueDate="${dueDate}" ecos:laManualNotificationTemplateEnabled="false" ecos:laNotificationAdditionalMeta="{}" ecos:laNotificationType="EMAIL_NOTIFICATION" ecos:laReportEnabled="false" ecos:priority="MEDIUM" ecos:assignees="[&quot;performer&quot;]" ecos:priorityExpression="${priority}">
                 <bpmn:incoming >Flow_0qx841c</bpmn:incoming>
@@ -196,16 +196,16 @@
                 <bpmn:incoming >Flow_1gzzlg9</bpmn:incoming>
                 <bpmn:outgoing >Flow_04a8fuh</bpmn:outgoing>
                 <bpmn:script>let allowedBefore = ['created', 'in-progress', 'verification'];
-                    let beforeStat = event.get("before").asText();
+let beforeStat = event.get("before").asText();
 
 
-                    if (beforeStat.length === 0) {
-                    throw new Error("Предыдущий статус не определен");
-                    }
+if (beforeStat.length === 0) {
+    throw new Error("Предыдущий статус не определен");
+}
 
-                    if (allowedBefore.indexOf(beforeStat) === -1) {
-                    throw new Error("Перевод в статус Уточнение невозможен");
-                    }</bpmn:script>
+if (allowedBefore.indexOf(beforeStat) === -1) {
+    throw new Error("Перевод в статус Уточнение невозможен");
+}</bpmn:script>
             </bpmn:scriptTask>
             <bpmn:exclusiveGateway default="Flow_1qwapm6" name="Исполнитель == Инициатор?" id="Gateway_1i4cr68" ecos:documentation="{}" ecos:name_ml="{&quot;ru&quot;:&quot;Исполнитель == Инициатор?&quot;}">
                 <bpmn:incoming >Flow_0up9xyi</bpmn:incoming>
@@ -278,8 +278,8 @@
                 <bpmn:outgoing >Flow_1vyrifc</bpmn:outgoing>
                 <bpmn:script>let initiator = document.load('initiator?id');
 
-                    document.att('performer', initiator);
-                    document.save();</bpmn:script>
+document.att('performer', initiator);
+document.save();</bpmn:script>
             </bpmn:scriptTask>
             <bpmn:exclusiveGateway name="" id="Gateway_1jdkm82" ecos:documentation="{}" ecos:name_ml="{}">
                 <bpmn:incoming >Flow_044b4cn</bpmn:incoming>
@@ -371,10 +371,10 @@
             <bpmn:incoming >Flow_1968mbx</bpmn:incoming>
             <bpmn:outgoing >Flow_0kyx31d</bpmn:outgoing>
             <bpmn:script>let dueDate = document.load('dueDate');
-                let priority = document.load('priority?num');
+let priority = document.load('priority?num');
 
-                execution.setVariable('dueDate', dueDate);
-                execution.setVariable('priority', priority);</bpmn:script>
+execution.setVariable('dueDate', dueDate);
+execution.setVariable('priority', priority);</bpmn:script>
         </bpmn:scriptTask>
         <bpmn:subProcess triggeredByEvent="true" name="Обновление срока и приоритета" id="Activity_0bbkv3b" ecos:documentation="{}" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Обновление срока и приоритета&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}">
             <bpmn:startEvent isInterrupting="false" name="Изменен срок или приоритет" id="Event_13088eg" ecos:documentation="{}" ecos:eventFilterByRecordType="DOCUMENT" ecos:eventModel="{}" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Изменен срок или приоритет&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:eventManualMode="false" ecos:eventType="RECORD_CHANGED" ecos:eventFilterByPredicate="{&quot;t&quot;:&quot;or&quot;,&quot;val&quot;:[{&quot;t&quot;:&quot;contains&quot;,&quot;att&quot;:&quot;diff._has.dueDate?bool!&quot;,&quot;val&quot;:true},{&quot;t&quot;:&quot;eq&quot;,&quot;att&quot;:&quot;diff._has.priority?bool!&quot;,&quot;val&quot;:true}]}">
@@ -390,38 +390,38 @@
                 <bpmn:incoming >Flow_0l4op3e</bpmn:incoming>
                 <bpmn:outgoing >Flow_0u2zx6u</bpmn:outgoing>
                 <bpmn:script>let dueDate = document.load('dueDate');
-                    let priority = document.load('priority?num');
+let priority = document.load('priority?num');
 
-                    execution.setVariable('dueDate', dueDate);
-                    execution.setVariable('priority', priority);</bpmn:script>
+execution.setVariable('dueDate', dueDate);
+execution.setVariable('priority', priority);</bpmn:script>
             </bpmn:scriptTask>
         </bpmn:subProcess>
         <bpmn:scriptTask scriptFormat="javascript" name="Проверка условий перехода" id="Activity_0skpmlt" ecos:documentation="{}" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Проверка условий перехода&quot;}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:script="exitBlock: {&#10;    let isMemberOfInitiator = document.load('_roles.isCurrentUserMemberOf.initiator?bool!');&#10;    if (isMemberOfInitiator) {&#10;        break exitBlock;&#10;    }&#10;&#10;    let allowedBefore = ['created', 'in-progress', 'clarification'];&#10;    let beforeStat = event.get(&quot;before&quot;).asText();&#10;&#10;    let isMemberOfVerifier = document.load('_roles.isCurrentUserMemberOf.verifier?bool!');&#10;    if (isMemberOfVerifier &amp;&amp; beforeStat === 'verification') {&#10;        break exitBlock;&#10;    }&#10;&#10;&#10;    if (beforeStat.length === 0) {&#10;        throw new Error(&quot;Предыдущий статус не определен&quot;);&#10;    }&#10;&#10;    if (allowedBefore.indexOf(beforeStat) === -1) {&#10;        throw new Error(&quot;Перевод в статус Выполнено невозможен&quot;);&#10;    }&#10;}">
             <bpmn:incoming >Flow_10ryjv1</bpmn:incoming>
             <bpmn:outgoing >Flow_0rkrvsb</bpmn:outgoing>
             <bpmn:script>exitBlock: {
-                let isMemberOfInitiator = document.load('_roles.isCurrentUserMemberOf.initiator?bool!');
-                if (isMemberOfInitiator) {
-                break exitBlock;
-                }
+    let isMemberOfInitiator = document.load('_roles.isCurrentUserMemberOf.initiator?bool!');
+    if (isMemberOfInitiator) {
+        break exitBlock;
+    }
 
-                let allowedBefore = ['created', 'in-progress', 'clarification'];
-                let beforeStat = event.get("before").asText();
+    let allowedBefore = ['created', 'in-progress', 'clarification'];
+    let beforeStat = event.get("before").asText();
 
-                let isMemberOfVerifier = document.load('_roles.isCurrentUserMemberOf.verifier?bool!');
-                if (isMemberOfVerifier &amp;&amp; beforeStat === 'verification') {
-                break exitBlock;
-                }
+    let isMemberOfVerifier = document.load('_roles.isCurrentUserMemberOf.verifier?bool!');
+    if (isMemberOfVerifier &amp;&amp; beforeStat === 'verification') {
+        break exitBlock;
+    }
 
 
-                if (beforeStat.length === 0) {
-                throw new Error("Предыдущий статус не определен");
-                }
+    if (beforeStat.length === 0) {
+        throw new Error("Предыдущий статус не определен");
+    }
 
-                if (allowedBefore.indexOf(beforeStat) === -1) {
-                throw new Error("Перевод в статус Выполнено невозможен");
-                }
-                }</bpmn:script>
+    if (allowedBefore.indexOf(beforeStat) === -1) {
+        throw new Error("Перевод в статус Выполнено невозможен");
+    }
+}</bpmn:script>
         </bpmn:scriptTask>
         <bpmn:sendTask name="Уведомление о выполнении" id="Activity_1ploe7w" ecos:notificationCc="[]" ecos:notificationBcc="[]" ecos:notificationLang="ru" ecos:asyncConfig="{&quot;asyncBefore&quot;:false,&quot;asyncAfter&quot;:false,&quot;exclusive&quot;:true}" ecos:name_ml="{&quot;ru&quot;:&quot;Уведомление о выполнении&quot;}" ecos:notificationCcExpression="[]" ecos:notificationTemplate="notifications/template@assignment-done-notification" ecos:notificationBccExpression="[]" ecos:notificationAdditionalMeta="{}" ecos:notificationTo="[&quot;initiator&quot;,&quot;performer&quot;,&quot;verifier&quot;]" ecos:notificationSendCalendarEvent="false" ecos:documentation="{}" ecos:jobConfig="{&quot;jobPriority&quot;:null,&quot;jobRetryTimeCycle&quot;:null}" ecos:notificationType="EMAIL_NOTIFICATION" ecos:notificationToExpression="[]">
             <bpmn:incoming >Flow_0f95ygs</bpmn:incoming>

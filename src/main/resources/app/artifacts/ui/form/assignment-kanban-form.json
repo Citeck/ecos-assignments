@@ -8,7 +8,7 @@
   "customModule": "",
   "typeRef": "emodel/type@assignment-type",
   "width": "",
-  "system": false,
+  "system": true,
   "i18n": {},
   "definition": {
     "components": [
