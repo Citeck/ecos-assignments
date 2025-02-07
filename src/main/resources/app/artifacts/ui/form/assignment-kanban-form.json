@@ -8,7 +8,7 @@
   "customModule": "",
   "typeRef": "emodel/type@assignment-type",
   "width": "",
-  "system": true,
+  "system": false,
   "i18n": {},
   "definition": {
     "components": [
@@ -18,18 +18,6 @@
         "type": "panel",
         "input": false,
         "components": [
-          {
-            "label": {
-              "ru": "initiator"
-            },
-            "key": "initiator",
-            "disabled": true,
-            "defaultValue": "",
-            "refreshOn": [],
-            "optionalWhenDisabled": false,
-            "type": "selectOrgstruct",
-            "input": true
-          },
           {
             "label": {
               "ru": "priority"
@@ -95,12 +83,26 @@
           },
           {
             "label": {
+              "ru": "initiator"
+            },
+            "key": "initiator",
+            "disabled": true,
+            "defaultValue": "",
+            "refreshOn": [],
+            "optionalWhenDisabled": false,
+            "customConditional": "var shouldShow = true;\n\nlet currentWorkspace = Citeck.Navigator.getWorkspaceId();\nif (currentWorkspace) {\n  shouldShow = !currentWorkspace.startsWith(\"user$\");\n}\n\nshow = shouldShow;",
+            "type": "selectOrgstruct",
+            "input": true
+          },
+          {
+            "label": {
               "ru": "performer"
             },
             "key": "performer",
             "defaultValue": "",
             "refreshOn": [],
             "optionalWhenDisabled": false,
+            "customConditional": "var shouldShow = true;\n\nlet currentWorkspace = Citeck.Navigator.getWorkspaceId();\nif (currentWorkspace) {\n  shouldShow = !currentWorkspace.startsWith(\"user$\");\n}\n\nshow = shouldShow;",
             "type": "selectOrgstruct",
             "input": true
           }
