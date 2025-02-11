@@ -1,0 +1,39 @@
+id: add-assignments-kanban-to-default-ws
+name: { ru: Добавить Канбан поручения в рабочее пространство по умолчанию }
+
+target: 'ui/menu$default-ws-menu'
+
+type: json
+order: 70
+config:
+  operations:
+    - op: add
+      path: '$.subMenu.create.items'
+      value: {
+        "id": "create-assignments",
+        "label": {
+          "ru": "Поручение",
+          "en": "Assignment"
+        },
+        "type": "LINK-CREATE-CASE",
+        "config": {
+          "typeRef": "emodel/type@assignment-type",
+          "variantId": "DEFAULT",
+          "variantTypeRef": "emodel/type@assignment-type"
+        }
+      }
+    - op: add
+      path: '$..[?(@.id == "sections")].items'
+      value: {
+        "id": "assignments",
+        "label": {
+          "ru": "Поручения",
+          "en": "Assignments"
+        },
+        "icon": "ui/icon@i-leftmenu-subordinate-tasks",
+        "hidden": false,
+        "type": "KANBAN",
+        "config": {
+          "recordRef": "uiserv/board@assignments-kanban"
+        }
+      }
