@@ -7,8 +7,8 @@ cardFieldsLabelLayout: LEFT
 readOnly: false
 disableTitle: false
 name:
-  ru: Канбан поручения
-  en: Assignments kanban
+  ru: Доска поручений
+  en: Assignment board
 actions: null
 columns:
   - id: created

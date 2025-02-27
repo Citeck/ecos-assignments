@@ -1,0 +1,62 @@
+---
+id: assignments-personal-journal
+name:
+  ru: Поручения (персональные)
+  en: Assignments (personal)
+typeRef: emodel/type@assignment-type
+actions:
+  - uiserv/action@edit
+  - uiserv/action@view-dashboard
+  - uiserv/action@view-dashboard-in-background
+  - uiserv/action@delete
+columns:
+  - id: priority
+    name:
+      en: Priority
+      ru: Приоритет
+    editor:
+      type: select
+      config:
+        options:
+          - label:
+              ru: Высокий
+              en: High
+            value: 1
+          - label:
+              ru: Средний
+              en: Medium
+            value: 2
+          - label:
+              ru: Низкий
+              en: Low
+            value: 3
+    formatter:
+      type: workflowPriority
+    searchable: true
+    sortable: true
+  - id: title
+    name:
+      ru: Название
+      en: Title
+    type: TEXT
+  - id: dueDate
+    name:
+      ru: Срок
+      en: Deadline
+    type: DATETIME
+  - id: _status
+    name:
+      ru: Статус
+      en: Status
+  - id: initiator
+    name:
+      ru: Инициатор
+      en: Initiator
+    type: AUTHORITY
+    visible: false
+  - id: performer
+    name:
+      ru: Исполнитель
+      en: Performer
+    type: AUTHORITY
+    visible: false

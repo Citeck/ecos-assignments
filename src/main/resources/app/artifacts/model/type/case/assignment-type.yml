@@ -11,6 +11,8 @@ inheritForm: false
 dispNameTemplate:
   ru: 'Поручение: ${title}'
   en: 'Assignment: ${title}'
+actions:
+  - uiserv/action@return-to-new-assignment-from-archive
 associations:
   - id: assoc:associatedWith
     name:
@@ -20,6 +22,7 @@ associations:
     journalsFromTarget: true
     direction: BOTH
 defaultCreateVariant: true
+postCreateActionRef: uiserv/action@none
 model:
   roles:
     - id: initiator
@@ -46,6 +49,10 @@ model:
         en: Administrator
       assignees:
         - GROUP_ECOS_ADMINISTRATORS
+    - id: EVERYONE
+      name:
+        ru: Все
+        en: Everyone
   statuses:
     - id: created
       name:
@@ -71,6 +78,13 @@ model:
       name:
         ru: В работе
         en: In progress
+    - id: archive
+      name:
+        ru: Архив
+    - id: ANY
+      name:
+          ru: Любой
+          en: Any
   attributes:
     - id: title
       name:

@@ -10,10 +10,10 @@ config:
     - op: add
       path: '$.subMenu.create.items'
       value: {
-        "id": "create-assignments",
+        "id": "create-assignments-task",
         "label": {
-          "ru": "Поручение",
-          "en": "Assignment"
+          "ru": "Задача",
+          "en": "Task"
         },
         "type": "LINK-CREATE-CASE",
         "config": {
@@ -27,8 +27,8 @@ config:
       value: {
         "id": "personal-assignments",
         "label": {
-          "ru": "Поручения",
-          "en": "Assignments"
+          "ru": "Доска задач",
+          "en": "Task board"
         },
         "icon": "ui/icon@i-leftmenu-subordinate-tasks",
         "hidden": false,

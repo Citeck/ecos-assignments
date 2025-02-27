@@ -1,14 +1,14 @@
 ---
 id: assignments-kanban-personal
 typeRef: emodel/type@assignment-type
-journalRef: uiserv/journal@assignments-journal
+journalRef: uiserv/journal@assignments-personal-journal
 cardFormRef: uiserv/form@assignment-kanban-form
 cardFieldsLabelLayout: LEFT
 readOnly: false
 disableTitle: false
 name:
-  ru: Канбан поручения (персональные)
-  en: Assignments kanban (personal)
+  ru: Доска поручений (персональные)
+  en: Assignment board (personal)
 actions: null
 columns:
   - id: created

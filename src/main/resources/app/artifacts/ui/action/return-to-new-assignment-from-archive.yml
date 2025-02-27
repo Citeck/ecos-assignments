@@ -1,0 +1,29 @@
+---
+id: return-to-new-assignment-from-archive
+name:
+  ru: Вернуть в работу
+  en: Return to work
+type: mutate
+config:
+  record:
+    id: eproc/bpmn-proc@assignment-process
+    attributes:
+      document: ${?id}
+confirm:
+  title:
+    ru: Вернуть в работу
+    en: Return to work
+  message:
+    ru: Вы уверены, что хотите вернуть в работу?
+    en: Are you sure you want to return to work?
+predicate:
+  t: and
+  val:
+    - t: and
+      val:
+        - t: eq
+          att: _status?str
+          val: archive
+        - t: eq
+          att: _roles.isCurrentUserMemberOf.initiator?bool
+          val: true

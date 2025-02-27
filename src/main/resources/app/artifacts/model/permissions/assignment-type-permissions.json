@@ -9,7 +9,8 @@
         "rework": "READ",
         "complete": "WRITE",
         "clarification": "WRITE",
-        "in-progress": "WRITE"
+        "in-progress": "WRITE",
+        "archive": "WRITE"
       },
       "performer": {
         "created": "WRITE",
@@ -17,7 +18,8 @@
         "rework": "READ",
         "complete": "READ",
         "clarification": "WRITE",
-        "in-progress": "WRITE"
+        "in-progress": "WRITE",
+        "archive": "READ"
       },
       "verifier": {
         "created": "READ",
@@ -25,7 +27,8 @@
         "rework": "READ",
         "complete": "READ",
         "clarification": "WRITE",
-        "in-progress": "WRITE"
+        "in-progress": "WRITE",
+        "archive": "READ"
       },
       "administrator": {
         "created": "WRITE",
@@ -33,7 +36,11 @@
         "rework": "WRITE",
         "complete": "WRITE",
         "clarification": "WRITE",
-        "in-progress": "WRITE"
+        "in-progress": "WRITE",
+        "archive": "WRITE"
+      },
+      "EVERYONE": {
+        "ANY": "READ"
       }
     },
     "rules": []

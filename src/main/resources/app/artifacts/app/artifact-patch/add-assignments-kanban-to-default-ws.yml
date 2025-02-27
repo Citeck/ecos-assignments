@@ -27,8 +27,8 @@ config:
       value: {
         "id": "assignments",
         "label": {
-          "ru": "Поручения",
-          "en": "Assignments"
+          "ru": "Доска поручений",
+          "en": "Assignment board"
         },
         "icon": "ui/icon@i-leftmenu-subordinate-tasks",
         "hidden": false,

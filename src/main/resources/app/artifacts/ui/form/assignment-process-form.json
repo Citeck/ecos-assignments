@@ -1,0 +1,189 @@
+{
+  "id": "assignment-process-form",
+  "formKey": "",
+  "title": {
+    "en": "Поручения. Форма обработки поручения"
+  },
+  "description": {},
+  "customModule": "",
+  "typeRef": "",
+  "width": "",
+  "system": true,
+  "i18n": {},
+  "definition": {
+    "components": [
+      {
+        "scrollableContent": true,
+        "key": "panel2",
+        "type": "panel",
+        "input": false,
+        "components": [
+          {
+            "label": {
+              "ru": "Комментарий",
+              "en": "Comment"
+            },
+            "key": "comment",
+            "defaultValue": "",
+            "refreshOn": [],
+            "optionalWhenDisabled": false,
+            "type": "textarea",
+            "input": true
+          }
+        ]
+      },
+      {
+        "label": {
+          "ru": "Columns"
+        },
+        "key": "columns2",
+        "columns": [
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "На уточнение"
+                },
+                "key": "outcome_clarification",
+                "state": "",
+                "theme": "warning",
+                "block": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "customConditional": "var shouldShow = true;\n\nlet currentWorkspace = Citeck.Navigator.getWorkspaceId();\nif (currentWorkspace) {\n  shouldShow = !currentWorkspace.startsWith(\"user$\");\n}\n\nshow = shouldShow;",
+                "type": "button",
+                "input": true,
+                "headers": [
+                  {}
+                ]
+              },
+              {
+                "label": {
+                  "ru": "В работу"
+                },
+                "key": "outcome_to-work",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "customConditional": "var shouldShow = false;\n\nlet currentWorkspace = Citeck.Navigator.getWorkspaceId();\nif (currentWorkspace) {\n  shouldShow = currentWorkspace.startsWith(\"user$\");\n}\n\nshow = shouldShow;",
+                "type": "button",
+                "input": true,
+                "headers": [
+                  {}
+                ]
+              }
+            ],
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "label": "Column",
+            "md": 3,
+            "clearOnHide": true,
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "index": 0
+          },
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "В работу"
+                },
+                "key": "outcome_to-work",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "customConditional": "var shouldShow = true;\n\nlet currentWorkspace = Citeck.Navigator.getWorkspaceId();\nif (currentWorkspace) {\n  shouldShow = !currentWorkspace.startsWith(\"user$\");\n}\n\nshow = shouldShow;",
+                "type": "button",
+                "input": true,
+                "headers": [
+                  {}
+                ]
+              },
+              {
+                "label": {
+                  "ru": "Выполнено"
+                },
+                "key": "outcome_done",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "customConditional": "var shouldShow = false;\n\nlet currentWorkspace = Citeck.Navigator.getWorkspaceId();\nif (currentWorkspace) {\n  shouldShow = currentWorkspace.startsWith(\"user$\");\n}\n\nshow = shouldShow;",
+                "type": "button",
+                "input": true,
+                "headers": [
+                  {}
+                ]
+              }
+            ],
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "label": "Column",
+            "clearOnHide": true,
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "index": 1,
+            "md": 3
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "label": "Column",
+            "components": [
+              {
+                "label": {
+                  "ru": "Выполнено"
+                },
+                "key": "outcome_done",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "customConditional": "var shouldShow = true;\n\nlet currentWorkspace = Citeck.Navigator.getWorkspaceId();\nif (currentWorkspace) {\n  shouldShow = !currentWorkspace.startsWith(\"user$\");\n}\n\nshow = shouldShow;",
+                "type": "button",
+                "input": true,
+                "headers": [
+                  {}
+                ]
+              }
+            ],
+            "clearOnHide": true,
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "index": 2
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 3,
+            "components": []
+          }
+        ],
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
+      }
+    ],
+    "formId": "assignment-process-form"
+  },
+  "attributes": {},
+  "notExists": false
+}

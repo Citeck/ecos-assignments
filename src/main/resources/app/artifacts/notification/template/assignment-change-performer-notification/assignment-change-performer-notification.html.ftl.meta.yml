@@ -1,0 +1,17 @@
+{
+  "id": "assignment-change-performer-notification",
+  "name": "Поручение. Изменен исполнитель",
+  "notificationTitle": {
+    "ru": "Вы назначены исполнителем по поручению: ${title}",
+    "en": "You are assigned as a performer for the assignment: ${title}"
+  },
+  "tags": [],
+  "model": {
+    "title": "title",
+    "priority": "priority?num",
+    "description": "description",
+    "dueDate": "dueDate",
+    "docRef": ".id"
+  },
+  "multiTemplateConfig": []
+}

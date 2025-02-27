@@ -70,9 +70,6 @@
                   "en": "Description"
                 },
                 "key": "description",
-                "validate": {
-                  "required": true
-                },
                 "editor": "ckeditor",
                 "wysiwyg": {
                   "theme": "snow",
