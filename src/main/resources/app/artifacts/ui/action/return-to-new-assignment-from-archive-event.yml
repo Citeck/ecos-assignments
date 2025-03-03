@@ -1,8 +1,8 @@
 ---
 id: return-to-new-assignment-from-archive-event
 name:
-  ru: Вернуть в работу event
-  en: Return to work event
+  ru: Вернуть в работу
+  en: Return to work
 type: user-event
 config:
   record: ${?id}
