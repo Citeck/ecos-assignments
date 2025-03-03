@@ -1,14 +1,11 @@
 ---
-id: return-to-new-assignment-from-archive
+id: return-to-new-assignment-from-archive-event
 name:
-  ru: Вернуть в работу
-  en: Return to work
-type: mutate
+  ru: Вернуть в работу event
+  en: Return to work event
+type: user-event
 config:
-  record:
-    id: eproc/bpmn-proc@assignment-process
-    attributes:
-      document: ${?id}
+  record: ${?id}
 confirm:
   title:
     ru: Вернуть в работу

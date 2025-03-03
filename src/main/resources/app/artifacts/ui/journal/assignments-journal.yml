@@ -53,10 +53,8 @@ columns:
       ru: Инициатор
       en: Initiator
     type: AUTHORITY
-    visible: false
   - id: performer
     name:
       ru: Исполнитель
       en: Performer
     type: AUTHORITY
-    visible: false

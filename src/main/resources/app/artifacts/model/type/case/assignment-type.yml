@@ -12,7 +12,7 @@ dispNameTemplate:
   ru: 'Поручение: ${title}'
   en: 'Assignment: ${title}'
 actions:
-  - uiserv/action@return-to-new-assignment-from-archive
+  - uiserv/action@return-to-new-assignment-from-archive-event
 associations:
   - id: assoc:associatedWith
     name:

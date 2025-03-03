@@ -1,0 +1,179 @@
+{
+  "id": "assignment-task-clarify-form",
+  "formKey": "",
+  "title": {
+    "en": "Поручения. Форма уточнения поручения"
+  },
+  "description": {},
+  "customModule": "",
+  "typeRef": "",
+  "width": "",
+  "system": true,
+  "i18n": {},
+  "definition": {
+    "components": [
+      {
+        "label": "Запрос проверяющего",
+        "source": {
+          "type": "record",
+          "record": {
+            "id": "{{recordId}}",
+            "attributes": {
+              "id": "_ECM_verifier.id"
+            }
+          },
+          "forceLoad": false
+        },
+        "update": {
+          "type": "any-change",
+          "rate": 300
+        },
+        "key": "verifierRequest",
+        "type": "asyncData",
+        "input": true
+      },
+      {
+        "scrollableContent": true,
+        "key": "panel2",
+        "type": "panel",
+        "input": false,
+        "components": [
+          {
+            "label": {
+              "ru": "Комментарий",
+              "en": "Comment"
+            },
+            "key": "comment",
+            "defaultValue": "",
+            "refreshOn": [],
+            "optionalWhenDisabled": false,
+            "type": "textarea",
+            "input": true
+          }
+        ]
+      },
+      {
+        "label": {
+          "ru": "Columns"
+        },
+        "key": "columns2",
+        "columns": [
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "Вернуть в работу",
+                  "en": "To work"
+                },
+                "key": "outcome_return-to-work",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "refreshOn": [],
+                "optionalWhenDisabled": false,
+                "type": "button",
+                "input": true,
+                "headers": [
+                  {}
+                ]
+              }
+            ],
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "label": "Column",
+            "md": 3,
+            "clearOnHide": true,
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "index": 0
+          },
+          {
+            "components": [
+              {
+                "label": {
+                  "ru": "Закрыть поручение"
+                },
+                "key": "outcome_close",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "refreshOn": [
+                  "verifierRequest"
+                ],
+                "optionalWhenDisabled": false,
+                "customConditional": "var showButton = false;\nconst verifierId = _.get(data, 'verifierRequest.id');\n\n// Проверяем на undefined специально, чтобы на форме по умолчанию не показывать\n// кнопки, иначе они моргают\nif (verifierId !== undefined) {\n  const verifierIsSet = verifierId && verifierId.length > 0;\n  showButton = !verifierIsSet\n}\n  \nshow = showButton;",
+                "type": "button",
+                "input": true,
+                "headers": [
+                  {}
+                ]
+              },
+              {
+                "label": {
+                  "ru": "Отправить на проверку",
+                  "en": "To check"
+                },
+                "key": "outcome_to-check",
+                "state": "",
+                "theme": "primary",
+                "block": true,
+                "refreshOn": [
+                  "verifierRequest"
+                ],
+                "optionalWhenDisabled": false,
+                "customConditional": "const verifierId = _.get(data, 'verifierRequest.id') || '';\nconst verifierIsSet = !!verifierId && verifierId.length > 0;\n  \nshow = verifierIsSet;",
+                "type": "button",
+                "input": true,
+                "headers": [
+                  {}
+                ]
+              }
+            ],
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "label": "Column",
+            "clearOnHide": true,
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "index": 1,
+            "md": 3
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "label": "Column",
+            "components": [],
+            "clearOnHide": true,
+            "conditional": {
+              "show": null,
+              "when": null
+            },
+            "index": 2
+          },
+          {
+            "md": 3,
+            "type": "column",
+            "input": false,
+            "key": "column",
+            "index": 3,
+            "components": []
+          }
+        ],
+        "oneColumnInViewMode": false,
+        "type": "columns",
+        "input": false
+      }
+    ],
+    "formId": "assignment-task-clarify-form"
+  },
+  "attributes": {},
+  "notExists": false
+}
