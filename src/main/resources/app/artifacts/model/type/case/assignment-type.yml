@@ -22,7 +22,6 @@ associations:
     journalsFromTarget: true
     direction: BOTH
 defaultCreateVariant: true
-postCreateActionRef: uiserv/action@none
 workspaceScope: PRIVATE
 model:
   roles:
