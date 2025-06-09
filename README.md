@@ -2,9 +2,9 @@
 
 **Read this in other languages: [Русский](README.RU.MD)**
 
-# `ecos-assignments`
+# `Assignments`
 
-The `ecos-assignments` module is designed to assign and verify tasks within Citeck modules and workspaces.
+The `Assignments` module is designed to assign and verify tasks within Citeck modules and workspaces.
 
 ## Get started
 
@@ -20,8 +20,8 @@ We welcome contributions from the community to make Citeck even better. Everyone
 
 ## Support
 
-If you need any assistance or have any questions regarding Citeck `ecos-assignments`, please create an issue in this repository or reach out to our [support team](mailto:support@citeck.ru).
+If you need any assistance or have any questions regarding Citeck `Assignments`, please create an issue in this repository or reach out to our [support team](mailto:support@citeck.ru).
 
 ## License
 
-Citeck `ecos-assignments` is released under the [GNU Lesser General Public License](LICENSE).
+Citeck `Assignments` is released under the [GNU Lesser General Public License](LICENSE).
