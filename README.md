@@ -2,7 +2,7 @@
 
 **Read this in other languages: [Русский](README.RU.MD)**
 
-# `Assignments`
+# Assignments
 
 The `Assignments` module is designed to assign and verify tasks within Citeck modules and workspaces.
 
